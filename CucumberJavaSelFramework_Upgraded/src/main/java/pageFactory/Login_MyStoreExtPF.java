@@ -13,80 +13,80 @@ public class Login_MyStoreExtPF {
 	String strTestName;
 
 	@FindBy(xpath="//input[@id='id_gender1']")
-	WebElement rdbtnMr;
+	private WebElement rdbtnMr;
 
 	@FindBy(xpath="//input[@id='id_gender1']")
-	WebElement rdbtnMrs;
+	private WebElement rdbtnMrs;
 
 	@FindBy(xpath ="//input[@id='customer_firstname']")
-	WebElement txtbxFirstName;
+	private WebElement txtbxFirstName;
 
 	@FindBy(xpath ="//input[@id='customer_lastname']")
-	WebElement txtbxLastName;
+	private WebElement txtbxLastName;
 
 	@FindBy(xpath ="//input[@id='email']")
-	WebElement txtEmail;
+	private WebElement txtEmail;
 
 	@FindBy(xpath ="//input[@id='passwd']")
-	WebElement txtbxPassword; 
+	private WebElement txtbxPassword; 
 
 	@FindBy(xpath = "//select[@id='days']")
-	WebElement drpdnDate;
+	private WebElement drpdnDate;
 
 	@FindBy(xpath ="//select[@id='months']")
-	WebElement drpdnMonth;
+	private WebElement drpdnMonth;
 
 	@FindBy(xpath ="//select[@id='years']")
-	WebElement drpdnYear;
+	private WebElement drpdnYear;
 
 	@FindBy(xpath ="/input[@id='newsletter']")
-	WebElement chkbxNewsletter;
+	private WebElement chkbxNewsletter;
 
 	@FindBy(xpath = "//label[contains(text(),'Receive special offers from our partners!')]")
-	WebElement chkbxSplOffers;
+	private WebElement chkbxSplOffers;
 
 	@FindBy(xpath = "//input[@id='firstname']")
-	WebElement txtbxAddFirstName;
+	private WebElement txtbxAddFirstName;
 
 
 	@FindBy(xpath = "//input[@id='lastname']")
-	WebElement txtbxAddLastName;
+	private WebElement txtbxAddLastName;
 
 	@FindBy(xpath ="//input[@id='company']")
-	WebElement txtbxAddCompany;
+	private WebElement txtbxAddCompany;
 
 	@FindBy(xpath="//input[@id='address1']")
-	WebElement txtbxAddAddressline1;
+	private WebElement txtbxAddAddressline1;
 
 	@FindBy(xpath="//input[@id='address2']")
-	WebElement txtbxAddAddressline2;
+	private WebElement txtbxAddAddressline2;
 
 	@FindBy(xpath ="//input[@id='city']")
-	WebElement txtbxAddCity;
+	private WebElement txtbxAddCity;
 
 	@FindBy(xpath ="//select[@id='id_state']")
-	WebElement drpdnAddState;
+	private WebElement drpdnAddState;
 
 	@FindBy(xpath ="//input[@id='postcode']")
-	WebElement txtbxZipCode;
+	private WebElement txtbxZipCode;
 
 	@FindBy(xpath ="//select[@id='id_country']")
-	WebElement drpdnAddCountry;
+	private WebElement drpdnAddCountry;
 
 	@FindBy(xpath ="//textarea[@id='other']")
-	WebElement drpdnAddAdditonalInformation;
+	private WebElement drpdnAddAdditonalInformation;
 
 	@FindBy(xpath ="//input[@id='phone']")
-	WebElement txtbxAddHomePhone;
+	private WebElement txtbxAddHomePhone;
 
 	@FindBy(xpath ="//input[@id='phone_mobile']")
-	WebElement txtbxAddMobilePhone;
+	private WebElement txtbxAddMobilePhone;
 
 	@FindBy(xpath="//input[@id='alias']")
-	WebElement txtbxAddAlias;
+	private WebElement txtbxAddAlias;
 
 	@FindBy(xpath="//button[@id='submitAccount']")
-	WebElement btnRegister;
+	private WebElement btnRegister;
 
 
 

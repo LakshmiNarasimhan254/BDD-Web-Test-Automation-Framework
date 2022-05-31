@@ -3,6 +3,7 @@ package pageFactory;
 
 
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,7 +16,9 @@ public class MyStorePF {
 	WebDriver driver;
 	String strTestName;
 	@FindBy(xpath= "//a[contains(text(),'Sign in')]")
-	WebElement btnSignin;
+	private WebElement btnSignin;
+	
+	
 
 	public MyStorePF(WebDriver driver , String strTestName){
 		this.driver =driver;
@@ -35,10 +38,19 @@ public class MyStorePF {
 	}
 
 	
-
 	public void ClickSignin(Wrapper_Methods wmobj)
 	{
 		
 		wmobj.clickLnkBtn(btnSignin);
 	}
+	
+	public void ClicktoViewPopular(Wrapper_Methods wmobj,String strProductName)
+		
+	{
+		String strXpath = "//ul[@id='homefeatured']//div/a[@title = '" + strProductName+ "']";
+		WebElement PopularProduct = driver.findElement(By.xpath(strXpath));
+		wmobj.clickLnkBtn(PopularProduct);
+				
+	}
+	
 }

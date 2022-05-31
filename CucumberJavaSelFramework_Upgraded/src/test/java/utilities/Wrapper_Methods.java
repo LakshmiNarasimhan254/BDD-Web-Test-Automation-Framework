@@ -4,12 +4,14 @@ import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.Date;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -18,7 +20,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import reports.Excel_Reports;
@@ -151,6 +155,36 @@ public class Wrapper_Methods {
 			String sValue = element.getText();
 			System.out.println(sValue);
 			if(sVal == sValue){
+				strResult = "The Actual Text value " + sVal +" is displayed";
+				xlrpt.reportEvent(strResult, "PASS",sFinalPath,iRun);
+			}
+			else
+			{
+				strResult = "The Actual Text value " + sVal +" is not displayed";
+			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
+			}	
+		}catch (NoSuchElementException e) {
+			strResult ="The element is not found or not visible.";
+			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
+		} catch (WebDriverException e1){
+			strResult ="The browser is not available.";
+			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);			
+		} catch(Exception e2){
+			strResult ="An exception occured.";
+			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);				
+		} finally {
+
+			takeScreen(adriver,sFinalPath);
+			//xlrpt.reportSnapshot(sFinalPath);
+
+		}
+	}
+	
+	public void verifyContainsText(WebElement element, String sVal) throws IOException{
+		try {
+			String sValue = element.getText();
+			System.out.println(sValue);
+			if(sValue.contentEquals(sVal)){
 				strResult = "The Actual Text value " + sVal +" is displayed";
 				xlrpt.reportEvent(strResult, "PASS",sFinalPath,iRun);
 			}
@@ -379,7 +413,18 @@ public class Wrapper_Methods {
 
 		}	
 
-
+		public void webelementWait(WebElement We){
+			WebDriverWait wait = new WebDriverWait(adriver,Duration.ofSeconds(10));
+			wait.until(ExpectedConditions.visibilityOf(We));
+		}
+		
+		public void SwitchFramebyName(String strFrame){
+			adriver.switchTo().frame(strFrame);
+		}
+		
+		public void SwitchFramebyName(WebElement We){
+			adriver.switchTo().frame(We);
+		}
 
 		
 }

@@ -16,18 +16,18 @@ public class Login_MyStorePF {
 	String strTestName;
 
 	@FindBy(xpath="//input[@id='email_create']")
-	WebElement txtbxCreateEmail;
+	private WebElement txtbxCreateEmail;
 	@FindBy(xpath="//button[@id='SubmitCreate']")
-	WebElement btnCreateAccount;
+	private WebElement btnCreateAccount;
 
 	@FindBy(xpath= "//input[@id='email']")
-	WebElement txtEmailaddress;
+	private WebElement txtEmailaddress;
 
 	@FindBy(xpath= "//input[@id='passwd']")
-	WebElement txtPassword;
+	private WebElement txtPassword;
 
 	@FindBy(xpath="//button[@id='SubmitLogin']")
-	WebElement btnSignin;
+	private WebElement btnSignin;
 
 
 	public Login_MyStorePF(WebDriver driver , String strTestName){

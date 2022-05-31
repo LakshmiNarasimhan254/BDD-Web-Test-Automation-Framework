@@ -61,17 +61,24 @@ public class MyStorePFSteps {
 		
 	}
 	@When("^Clicks on (.*) in MyStore Page$")
-	public void the_user_clicks_on_MyStore_Page(String strFieldName) {
-		strFieldName = strFieldName.replace(" ","").trim().toUpperCase();
+	public void the_user_clicks_on_MyStore_Page(String strFieldName) {		
 		strFieldName= strFieldName.replace("<", "");
 		strFieldName= strFieldName.replace(">", "");
-		System.out.println(strFieldName);
+		strFieldName = strFieldName.replace(" ","").trim().toUpperCase();
+		//System.out.println(strFieldName);
 
 
 		switch(strFieldName){
 		case "SIGNIN":
 			mystorePF.ClickSignin(wm);
 			break;
+		case "BLOUSE":
+			mystorePF.ClicktoViewPopular(wm, "Blouse");
+			break;
+		case "PRINTEDDRESS":
+			mystorePF.ClicktoViewPopular(wm, "Printed Dress");
+			break;	
+			
 		default:
 			throw new IllegalStateException("The Field value given is not correct");
 		}		
