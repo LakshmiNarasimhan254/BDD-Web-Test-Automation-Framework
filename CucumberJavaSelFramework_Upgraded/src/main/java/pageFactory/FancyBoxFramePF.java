@@ -51,10 +51,17 @@ public class FancyBoxFramePF {
 
 	public FancyBoxFramePF(WebDriver driver){
 		this.driver =driver;
-//  	 WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));    
-//     w.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//iframe[contains(@id,'fancybox-frame')]")));
-	    
-		driver.switchTo().frame(1);
+ 	 WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));    
+     w.until(ExpectedConditions.elementToBeClickable(By.xpath("//iframe[contains(@id,'fancybox-frame')]")));
+	    //System.out.println("hi");
+	    List<WebElement> frames = driver.findElements(By.xpath("//iframe"));
+	  	for (WebElement we : frames ){
+	  		//System.out.println(we.getAttribute("name"));
+	  		if (we.getAttribute("name").contains("fancybox-frame")){
+	  			driver.switchTo().frame(we.getAttribute("name"));
+	  		}
+	  	}
+	  
 		PageFactory.initElements(driver, this);
 		
 	}

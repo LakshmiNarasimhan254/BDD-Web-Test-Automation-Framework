@@ -1,7 +1,8 @@
 Feature: feature to login scenario
 
   @functional
-  Scenario: To check if login is fail with incorrect cred
+  Scenario:TCS5 
+  #To check if login is passed with correct cred
 Given The user is in MyStore Page
     When Clicks on <Sign in> in MyStore Page
     Then the user should be navigated to <Login_MyStorePage>

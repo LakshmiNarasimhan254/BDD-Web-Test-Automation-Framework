@@ -44,7 +44,8 @@ public class Layer_CartPFSteps {
 
 	@And("Verify if the Layared_Cart Page is displayed")
 	public void enters_the_txt() {
-		layer_CartPF = testContext.getPageObjectManager().getlayer_CartPF();
+	//	layer_CartPF = testContext.getPageObjectManager().getlayer_CartPF();
+		driver.switchTo().defaultContent();
 		WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));    
 		w.until(ExpectedConditions.visibilityOf(layer_CartPF.getBtnProceedtoCheckout()));
 

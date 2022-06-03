@@ -1,11 +1,14 @@
 package pageFactory;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,17 +16,25 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.Wrapper_Methods;
+
 public class Cart_SummaryPF {
 	WebDriver driver;
 	String strTestName;
 	@FindBy(xpath= "//h1[@id='cart_title']")
-	WebElement txtCartSummary;
+	private WebElement txtCartSummary;
 
 	@FindBy(xpath="//span[@id='summary_products_quantity']")
-	WebElement txtProductCount;
+	private WebElement txtProductCount;
 
 	@FindBy(xpath="//table[@id='cart_summary']")
-	WebElement tbleCartSummary;
+	private WebElement tbleCartSummary;
+	
+	@FindBy(xpath="//p[@class='cart_navigation clearfix']/a[@title ='Proceed to checkout']")
+	private WebElement btnProceedtoCheckout;
+	
+	@FindBy(xpath="//p[@class='cart_navigation clearfix']/a[@title ='Continue shopping']")
+	private WebElement btnContShopping;
 
 	public Cart_SummaryPF(WebDriver driver){
 		this.driver =driver;
@@ -70,56 +81,92 @@ public class Cart_SummaryPF {
 			hm.put(iHashMapKey+"SIZE", lnkSize);
 
 
-			
+
 			String txIinstock= linedetails.findElement(By.xpath(".//td[3]/span")).getText();
 			hm.put(iHashMapKey+"AVAIL", txIinstock);
-			
+
 			String txtunitPrice = linedetails.findElement(By.xpath(".//td[4]//span[1]/span[1]")).getText();
-			hm.put(iHashMapKey+"UNITPRICE", txIinstock);
-			
+			hm.put(iHashMapKey+"UNITPRICE", txtunitPrice);
+
 			//WebElement txtPriceReduction = linedetails.findElement(By.xpath(".//td[4]//span[1]/span[2]"));
 			//WebElement txtoldPrice = linedetails.findElement(By.xpath(".//td[4]//span[1]/span[3]"));
-			
-			
+
+
 			String txtbxQuantity =linedetails.findElement(By.xpath(".//td[5]/input[1]")).getAttribute("value");
 			hm.put(iHashMapKey+"QUANTITY", txtbxQuantity);
-			
+
 			String txttotalPerProduct =linedetails.findElement(By.xpath(".//td[6]/span")).getText();
 			hm.put(iHashMapKey+"PRODUCTTOTAL", txttotalPerProduct);
-			
+
 			WebElement lnkdelete = linedetails.findElement(By.xpath(".//td[7]/div/a"));
-			
 
 
+
+
+
+
+		}
 
 		
-
-		}
-
-		Iterator<Entry<String, String>> hmiter =  hm.entrySet().iterator();
-		while (hmiter.hasNext()){
-		System.out.println(hmiter.next());
-		}
 		return hm;
 	}
 
 	public WebElement getTxtCartSummary() {
 		return txtCartSummary;
 	}
-	
-	
-	public void verifyCartDetails(String StrValue){
-		if (StrValue.contains(".")){
-			StrValue.replace(".","");
-				
-		}
-		getcartLineDetails(driver);
-		
+
+
+	public void verifyCartDetails(Wrapper_Methods wmobj,String StrValue) throws IOException{
+		String[] StrValues=null;
+
+		if (!(StrValue.contains("|"))){
+			StrValues = StrValue.split(",");
+			for (String s : StrValues){
+				if (s.contains(".")){
+					s.replaceAll(".", "");
+					String StrKeyValue = (s.split(":=")[0]).replace(" ", "").toUpperCase();
+					String StrExpectedValue = (s.split(":=")[1]);
+					//System.out.println(StrKeyValue);
+					wmobj.verifyText(getcartLineDetails(driver).get(StrKeyValue),StrExpectedValue);					
+				}
+			}
+		}else{	
+			StrValues=StrValue.split(Pattern.quote("|"));
+			String[] s1;
+			for (String s :StrValues){
+				s1= s.split(",");
+				for (String s2 : s1){
+					if (s2.contains(".")){
+						String s3 = s2.replaceAll("\\.", "");
+						//System.out.println(s2);
+						String StrKeyValue = (s3.split(":=")[0]).replace(" ", "").toUpperCase();
+						String StrExpectedValue = (s3.split(":=")[1]);
+						//System.out.println("This is thE key value " +StrKeyValue);
+						
+						//System.out.println(getcartLineDetails(driver).get(StrKeyValue));
+						wmobj.verifyText((getcartLineDetails(driver).get(StrKeyValue).trim()),StrExpectedValue);					
+					}
+				}
+
+
+			}}
+
+
+
 	}
+	
+	public void clickProceedtoCheckout(Wrapper_Methods wmobj)
 
+	{
+		wmobj.clickLnkBtn(btnProceedtoCheckout);
 
+	}
+	
+	public void clickContShopping(Wrapper_Methods wmobj)
 
+	{
+		wmobj.clickLnkBtn(btnContShopping);
 
-
+	}
 
 }

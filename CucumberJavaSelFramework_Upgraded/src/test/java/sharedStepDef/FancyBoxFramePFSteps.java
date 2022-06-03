@@ -4,10 +4,12 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map.Entry;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -44,23 +46,31 @@ public class FancyBoxFramePFSteps {
 
 	@And("^Verify if the (.*) Quickview is displayed$")
 	public void verifypagequickview(String strFieldNameValue) {
+		
 		driver.switchTo().defaultContent();
-		driver.switchTo().frame(1);
+		List<WebElement> frames = driver.findElements(By.xpath("//iframe"));
+	  	for (WebElement we : frames ){
+	  		//System.out.println(we.getAttribute("name"));
+	  		if (we.getAttribute("name").contains("fancybox-frame")){
+	  			driver.switchTo().frame(we.getAttribute("name"));
+	  		}
+	  	}
+		
 		strFieldNameValue = strFieldNameValue.trim();
 		strFieldNameValue= strFieldNameValue.replace("<", "");
 		strFieldNameValue= strFieldNameValue.replace(">", "");
-		System.out.println(fancyBoxFramePF.getTxtName().getText());
+		//System.out.println(fancyBoxFramePF.getTxtName().getText());
 		WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));    
 		w.until(ExpectedConditions.visibilityOf(fancyBoxFramePF.getTxtName()));
-		System.out.println(fancyBoxFramePF.getTxtName().getText());
-		System.out.println(strFieldNameValue);
+		//System.out.println(fancyBoxFramePF.getTxtName().getText());
+		//System.out.println(strFieldNameValue);
 
 
 		if (!(fancyBoxFramePF.getTxtName().getText().equalsIgnoreCase(strFieldNameValue))){
 			throw new IllegalStateException("Quick view window is not popped up");
 		}
 
-		System.out.println("pass");
+		//System.out.println("pass");
 		
 
 	}
@@ -68,7 +78,13 @@ public class FancyBoxFramePFSteps {
 	@Then("^Verify if the (.*) are displayed in Quickview$")
 	public void VerifyDetailsinquickview(String strFieldNameValue) throws IOException{
 		driver.switchTo().defaultContent();
-		driver.switchTo().frame(1);
+		List<WebElement> frames = driver.findElements(By.xpath("//iframe"));
+	  	for (WebElement we : frames ){
+	  		//System.out.println(we.getAttribute("name"));
+	  		if (we.getAttribute("name").contains("fancybox-frame")){
+	  			driver.switchTo().frame(we.getAttribute("name"));
+	  		}
+	  	}
 		strFieldNameValue = strFieldNameValue.trim();{
 			strFieldNameValue= strFieldNameValue.replace("<", "");
 			strFieldNameValue= strFieldNameValue.replace(">", "");
@@ -98,7 +114,13 @@ public class FancyBoxFramePFSteps {
 	@When("^Enter (.*) in Quickview$")
 	public void EnterDetailsinquickview(String strFieldNameValue) {
 		driver.switchTo().defaultContent();
-		driver.switchTo().frame(1);
+		List<WebElement> frames = driver.findElements(By.xpath("//iframe"));
+	  	for (WebElement we : frames ){
+	  		//System.out.println(we.getAttribute("name"));
+	  		if (we.getAttribute("name").contains("fancybox-frame")){
+	  			driver.switchTo().frame(we.getAttribute("name"));
+	  		}
+	  	}
 		strFieldNameValue = strFieldNameValue.trim();
 		strFieldNameValue= strFieldNameValue.replace("<", "");
 		strFieldNameValue= strFieldNameValue.replace(">", "");
@@ -126,7 +148,13 @@ public class FancyBoxFramePFSteps {
 @When("^Clicks on (.*) in Quickview")
 public void clickonbuttoninquickview(String strFieldNameValue) {
 	driver.switchTo().defaultContent();
-	driver.switchTo().frame(1);
+	List<WebElement> frames = driver.findElements(By.xpath("//iframe"));
+  	for (WebElement we : frames ){
+  		//System.out.println(we.getAttribute("name"));
+  		if (we.getAttribute("name").contains("fancybox-frame")){
+  			driver.switchTo().frame(we.getAttribute("name"));
+  		}
+  	}
 	strFieldNameValue = strFieldNameValue.trim();
 	strFieldNameValue= strFieldNameValue.replace("<", "");
 	strFieldNameValue= strFieldNameValue.replace(">", "");

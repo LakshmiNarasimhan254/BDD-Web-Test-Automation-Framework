@@ -56,7 +56,7 @@ public class Login_MyStorePFSteps {
 		login_mystorePF.EnterEmailaddress(wm, struseremail);
 		login_mystorePF.EnterPassword(wm,strpassword );
 
-		System.out.println("User enters username and password");
+		//System.out.println("User enters username and password");
 		//throw new io.cucumber.java.PendingException();
 	}
 
@@ -64,7 +64,7 @@ public class Login_MyStorePFSteps {
 	public void click_on_login() {
 		// Write code here that turns the phrase above into concrete actions
 		login_mystorePF.ClickSignin(wm);
-		System.out.println("clicks on login");
+		//System.out.println("clicks on login");
 		//throw new io.cucumber.java.PendingException();
 	}
 

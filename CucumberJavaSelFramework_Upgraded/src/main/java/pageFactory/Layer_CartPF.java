@@ -29,7 +29,7 @@ public class Layer_CartPF {
 	@FindBy(xpath="//span[@id='layer_cart_product_attributes']")
 	WebElement txtColorSize;
 	
-	@FindBy(xpath="//strong[contains(text(),'Quantity')]")
+	@FindBy(xpath="//span[@id='layer_cart_product_quantity']")
 	WebElement txtQuantity;	
 	
 	@FindBy(xpath="//span[@id='layer_cart_product_price']")

@@ -54,9 +54,9 @@ public class Hooks {
 		*/
 //	
 //
-	@After
-	public void AfterSteps() {
-		testContext.getDriverManager().closeDriver();
-	}
+//	@After
+//	public void AfterSteps() {
+//		testContext.getDriverManager().closeDriver();
+//	}
 
 }

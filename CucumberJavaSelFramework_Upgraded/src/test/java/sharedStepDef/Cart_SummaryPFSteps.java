@@ -1,16 +1,24 @@
 package sharedStepDef;
 
+import java.io.IOException;
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map.Entry;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import cucumber.TestContext;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import managers.DriverManager;
 import managers.FileReaderManager;
 import pageFactory.Cart_SummaryPF;
 import utilities.Excel_Utility;
+import utilities.HashMap_Utility;
 import utilities.Wrapper_Methods;
 
 public class Cart_SummaryPFSteps {
@@ -37,16 +45,61 @@ public class Cart_SummaryPFSteps {
 
 	@And("Verify if the user is in Cart_Summary Page")
 	public void enters_the_txt() {
-		System.out.println(driver.getCurrentUrl());
+		//System.out.println(driver.getCurrentUrl());
 		WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));    
 		w.until(ExpectedConditions.visibilityOf(cart_SummaryPF.getTxtCartSummary()));
 
 		if (cart_SummaryPF.getTxtCartSummary()==null){
 			throw new IllegalStateException("The  cart summary page is not displayed");
 		}
-			
+
 
 	}
+	@Then("^Verify if the (.*) are displayed in Cart_Summary Page$")
+	public void VerifyDetailsinCartSummary(String strFieldNameValue) throws IOException{
+		driver.switchTo().defaultContent();
+		strFieldNameValue = strFieldNameValue.trim();{
+			strFieldNameValue= strFieldNameValue.replace("<", "");
+			strFieldNameValue= strFieldNameValue.replace(">", "");
+
+			//System.out.println(strFieldNameValues.length);
+			//			HashMap<String, String> hm = HashMap_Utility.strArr_HM_usingSeparator(strFieldNameValues,":=");
+			//			Iterator<Entry<String, String>> iterKeyVal =hm.entrySet().iterator();
+			//			String strElement;
+
+		
+				if(strFieldNameValue.contains(("ExcelData"))){				
+					strFieldNameValue=strFieldNameValue.replace("ExcelData|", "");
+					//System.out.println(strFieldNameValue);
+					strFieldNameValue=em.getCellValueStringSearchtxt(strTestName, strFieldNameValue);
+				}
+				cart_SummaryPF.verifyCartDetails(wm, strFieldNameValue);
+			}
+
+
+		}
 	
+	@When("^Clicks on (.*) in Cart_Summary Page")
+	public void clickonButtoninCartSummary(String strFieldNameValue) {
+		driver.switchTo().defaultContent();
+		strFieldNameValue = strFieldNameValue.trim();
+		strFieldNameValue= strFieldNameValue.replace("<", "");
+		strFieldNameValue= strFieldNameValue.replace(">", "");
+		strFieldNameValue= strFieldNameValue.replace(" ", "");
+		strFieldNameValue =strFieldNameValue.toUpperCase();
+		switch(strFieldNameValue){
+		case "PROCEEDTOCHECKOUT":
+			cart_SummaryPF.clickProceedtoCheckout(wm);
+			break;
+		case "CONTINUESHOPPING":
+			cart_SummaryPF.clickContShopping(wm);
+			break;
+		default:
+			throw new IllegalStateException("No such button exists");
+		}
+	}
 	
+
 }
+
+

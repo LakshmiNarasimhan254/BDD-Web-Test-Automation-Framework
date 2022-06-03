@@ -153,14 +153,14 @@ public class Wrapper_Methods {
 	public void verifyText(WebElement element, String sVal) throws IOException{
 		try {
 			String sValue = element.getText();
-			System.out.println(sValue);
-			if(sVal == sValue){
+			//System.out.println(sValue);
+			if(sVal.equals(sValue)){
 				strResult = "The Actual Text value " + sVal +" is displayed";
 				xlrpt.reportEvent(strResult, "PASS",sFinalPath,iRun);
 			}
 			else
 			{
-				strResult = "The Actual Text value " + sVal +" is not displayed";
+				strResult = "The Actual Text value " + sVal +" is not displayed but the value "+ sValue + " is displayed";
 			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
 			}	
 		}catch (NoSuchElementException e) {
@@ -180,17 +180,50 @@ public class Wrapper_Methods {
 		}
 	}
 	
+	
+	public void verifyText(String ActualVal, String ExpectedVal) throws IOException{
+		try {
+			//String sValue = element.getText();
+		
+			if(ActualVal.equals(ExpectedVal)){
+				strResult = "The Actual Text value " + ActualVal +" is displayed";
+				xlrpt.reportEvent(strResult, "PASS",sFinalPath,iRun);
+			}
+			else
+			{
+				strResult = "The Actual Text value " + ActualVal +" is not displayed";
+			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
+			}	
+		}catch (NoSuchElementException e) {
+			strResult ="The element is not found or not visible.";
+			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
+		} catch (WebDriverException e1){
+			strResult ="The browser is not available.";
+			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);			
+		} catch(Exception e2){
+			strResult ="An exception occured.";
+					e2.printStackTrace();
+			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);				
+		} finally {
+
+			takeScreen(adriver,sFinalPath);
+			//xlrpt.reportSnapshot(sFinalPath);
+
+		}
+	}
+	
 	public void verifyContainsText(WebElement element, String sVal) throws IOException{
 		try {
-			String sValue = element.getText();
-			System.out.println(sValue);
-			if(sValue.contentEquals(sVal)){
+			String sValue = element.getText().trim();
+			//System.out.println(sValue);
+			if(sValue.contains(sVal.trim())){
+				
 				strResult = "The Actual Text value " + sVal +" is displayed";
 				xlrpt.reportEvent(strResult, "PASS",sFinalPath,iRun);
 			}
 			else
 			{
-				strResult = "The Actual Text value " + sVal +" is not displayed";
+				strResult = "The Actual Text value " + sVal +" is not displayed but the value "+ sValue + " is displayed";
 			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
 			}	
 		}catch (NoSuchElementException e) {
@@ -402,7 +435,7 @@ public class Wrapper_Methods {
 					iRun = fFile.length + 1;
 				}
 				sFinalPath = sAbsPath + "screenshots\\" + dDate  + "\\" + sTest+  "\\Run" + iRun + "\\snap" ;
-				System.out.println(sFinalPath);
+				//System.out.println(sFinalPath);
 				xlrpt = new Excel_Reports(sTest);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block

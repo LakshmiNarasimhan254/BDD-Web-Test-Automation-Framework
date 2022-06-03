@@ -55,7 +55,7 @@ public class Generic {
 	@Then("user should be navigated to home page")
 	public void user_should_be_navigated_to_home_page() {
 	    // Write code here that turns the phrase above into concrete actions
-		System.out.println("user should be navigated to home page");
+		//System.out.println("user should be navigated to home page");
 	    //throw new io.cucumber.java.PendingException();
 	}
 

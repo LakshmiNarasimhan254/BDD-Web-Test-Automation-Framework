@@ -53,13 +53,14 @@ String sTestRptPath;
 		}
 //Method to close the workbook				
 	public void closeWorkbook(int iRun){
+		
 		File file = new File(sTestRptPath);
 		File[] files = file.listFiles();
 		//System.out.println(files.length);
 		if (files != null) {
 			iCount = files.length;
 			iCount = iCount + 1;
-			iRun =iRun+1;
+		
 			//System.out.println("Hi");
 		}
 		else {

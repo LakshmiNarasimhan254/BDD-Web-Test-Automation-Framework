@@ -30,7 +30,7 @@ public class MyStorePFSteps {
 	
 
 	public MyStorePFSteps(TestContext context) {
-		System.out.println(strUrl);
+		//System.out.println(strUrl);
 		testContext = context;
 		driver = testContext.getDriverManager().getDriver();
 		wm = testContext.getWrapperMethods();
