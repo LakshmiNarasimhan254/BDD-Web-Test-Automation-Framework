@@ -16,7 +16,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class testme {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
+	//This Class is created for a quick test
 		
 		WebDriverManager.chromedriver().setup();
 		WebDriver Driver = new ChromeDriver();
