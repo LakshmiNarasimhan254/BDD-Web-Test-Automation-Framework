@@ -72,5 +72,5 @@ Feature: To click on my Popular Products
       | username          | password     |
       | lakme88@gmail.com | Password@123 |
     And clicks on login
-    Then user should be navigated to home page
+   # Then user should be navigated to home page
 		
