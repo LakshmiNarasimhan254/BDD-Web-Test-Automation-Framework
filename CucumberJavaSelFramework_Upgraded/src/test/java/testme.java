@@ -38,7 +38,7 @@ public class testme {
 		Driver.findElement(By.xpath("//a[@title='Proceed to checkout']")).click();
 		Set<String> wh = Driver.getWindowHandles();
 		for (String s :wh){
-			System.out.println(s +"hi");
+			System.out.println(s);
 		}
 		Driver.findElement(By.xpath("//a[@title='Continue shopping']")).click();
 		actions.moveToElement(Driver.findElement(By.xpath("//ul[@id='homefeatured']//div/a[@title ='Printed Dress']"))).perform();
