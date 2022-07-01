@@ -12,7 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.mln.utilities.Wrapper_Methods;
+import com.mln.utilities.Common_Utility;
 
 public class Layer_CartPF {
 
@@ -60,7 +60,7 @@ public class Layer_CartPF {
 	}
 
 
-	public WebElement getBtnProceedtoCheckout() {
+	public WebElement getBtnProceedtoCheckout() throws Exception {
 		return btnProceedtoCheckout;
 	}
 
@@ -68,50 +68,55 @@ public class Layer_CartPF {
 	
 
 
-	public void VerifyElementTxt(Wrapper_Methods wmobj,String strElement, String Value) throws IOException
+	public boolean VerifyElementTxt(Common_Utility wmobj,String strElement, String Value) throws Exception{
+		boolean bResult = false;
+	
+		try {
+			strElement =(strElement.replace(" ","").trim()).toUpperCase();
 
-	{
-		strElement =(strElement.replace(" ","").trim()).toUpperCase();
-
-		switch(strElement){
-		case "NAME":
-			wmobj.verifyText(txtName, Value);
-			break;	
-		case "COLOR":
-			wmobj.verifyContainsText(txtColorSize, Value);
-			break;
-		case "SIZE":
-			wmobj.verifyContainsText(txtColorSize, Value);
-			break;
-		case "QUANTITY":
-			wmobj.verifyText(txtQuantity,Value);
-			break;
-		case "PRICE":
-			wmobj.verifyText(txtPrice,Value);
-			break;
-		default:
-			throw new IllegalStateException("No such field exists. Please check" );
-
-
+			switch(strElement){
+			case "NAME":
+				bResult=wmobj.verifyText(txtName, Value);
+				break;	
+			case "COLOR":
+				bResult=wmobj.verifyContainsText(txtColorSize, Value);
+				break;
+			case "SIZE":
+				bResult=wmobj.verifyContainsText(txtColorSize, Value);
+				break;
+			case "QUANTITY":
+				bResult=wmobj.verifyText(txtQuantity,Value);
+				break;
+			case "PRICE":
+				bResult=wmobj.verifyText(txtPrice,Value);
+				break;
+			default:
+				bResult =false;
+				//throw new IllegalStateException("No such field exists. Please check" );
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+		return bResult;
 		
-		
-
-	}
-	
-	public void VerifySuccess(Wrapper_Methods wmobj, String Value) throws IOException{
-	
-		wmobj.verifyText(txtSuccessCart, Value);
 	}
 
-	public void clickProceedtoCheckout(Wrapper_Methods wmobj)
+	
+	
+	public boolean VerifySuccess(Common_Utility wmobj, String Value) throws Exception{
+	  boolean bResult = false;
+	 return bResult=wmobj.verifyText(txtSuccessCart, Value);
+	}
+
+	public void clickProceedtoCheckout(Common_Utility wmobj) throws Exception
 
 	{
 		wmobj.clickLnkBtn(btnProceedtoCheckout);
 
 	}
 
-	public void clickContShopping(Wrapper_Methods wmobj)
+	public void clickContShopping(Common_Utility wmobj) throws Exception
 
 	{
 		wmobj.clickLnkBtn(btnContShopping);

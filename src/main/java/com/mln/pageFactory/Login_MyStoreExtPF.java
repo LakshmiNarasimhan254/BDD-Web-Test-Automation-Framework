@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.mln.utilities.Wrapper_Methods;
+import com.mln.utilities.Common_Utility;
 
 public class Login_MyStoreExtPF {
 
@@ -109,7 +109,7 @@ public class Login_MyStoreExtPF {
 		}
 	}
 
-	public void EnterTxt(Wrapper_Methods wmobj, String strElement, String Value){
+	public void EnterTxt(Common_Utility wmobj, String strElement, String Value) throws Exception{
 		strElement =(strElement.replace(" ","").trim()).toUpperCase();
 		
 		switch(strElement){
@@ -174,56 +174,57 @@ public class Login_MyStoreExtPF {
 			throw new IllegalStateException("This is not a correct value: " + strElement);
 		}
 	}
-	public void SelectDOB(Wrapper_Methods wmobj, String Value){
+	public void SelectDOB(Common_Utility wmobj, String Value) throws Exception{
 		Value = Value.replace(" ","").trim();
 		String[] Date = Value.split("-");
 		String strDay = Date[0];
 		String strMonth = Date[1];
 		String strYear = Date[2];
 		
-		wmobj.SelectValuebyValue(drpdnDate, strDay);
+		wmobj.selectValuebyValue(drpdnDate, strDay);
 		if (Date[1].length() == 2){
 			if  (Date[1].startsWith("0")){
 				strMonth =Date[1].substring(1);				
 			}
 		}
-		wmobj.SelectValuebyValue(drpdnMonth, strMonth);
-		wmobj.SelectValuebyValue(drpdnYear, strYear);
+		wmobj.selectValuebyValue(drpdnMonth, strMonth);
+		wmobj.selectValuebyValue(drpdnYear, strYear);
 	}
 
 
-	public void SelectState(Wrapper_Methods wmobj, String Value){
+	public void SelectState(Common_Utility wmobj, String Value) throws Exception{
 		Value = Value.trim();		
-		wmobj.SelectValuebyText(drpdnAddState, Value);	
+		wmobj.selectValuebyText(drpdnAddState, Value);	
 	}
 
-	public void SelectCountry(Wrapper_Methods wmobj, String Value){
+	public void SelectCountry(Common_Utility wmobj, String Value) throws Exception{
 		Value = Value.trim();		
-		wmobj.SelectValuebyText(drpdnAddCountry, Value);	
+		wmobj.selectValuebyText(drpdnAddCountry, Value);	
 	}
 
-	public void SelectTitle(Wrapper_Methods wmobj, String Value){
+	public void SelectTitle(Common_Utility wmobj, String Value) throws Exception{
 		Value = (Value.trim()).toUpperCase();
 		if(Value == "MR"){
-			wmobj.SelectRadioButton(rdbtnMr);
+			wmobj.selectRadioButton(rdbtnMr);
 		}
 		else if (Value == "MRS"){
-			wmobj.SelectRadioButton(rdbtnMrs);
+			wmobj.selectRadioButton(rdbtnMrs);
 
 		}else {
 			throw new IllegalStateException("This is not a correct value: " + Value);
 		}
 	}
-	public void ClickRegister(Wrapper_Methods wmobj){
+	public void ClickRegister(Common_Utility wmobj) throws Exception{
 		wmobj.clickLnkBtn(btnRegister);
 	}
 
 
 
 
-	public void VerifyLogin_MyStoreExt(Wrapper_Methods wmobj)
-	{
-		wmobj.isElementPresent(btnRegister);
+	public boolean VerifyLogin_MyStoreExt(Common_Utility wmobj) throws Exception
+		
+	{	boolean bResult =false;
+		return bResult= wmobj.isElementPresent(btnRegister);
 	}
 
 }

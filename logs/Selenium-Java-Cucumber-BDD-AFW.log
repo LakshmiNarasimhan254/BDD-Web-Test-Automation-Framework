@@ -1,0 +1,58 @@
+2022-07-01 11:15:13,085 ERROR c.m.s.MyStorePFSteps [main] The Current Page is My Store and is not as expected.
+2022-07-01 11:27:37,200 ERROR c.m.s.MyStorePFSteps [main] The Current Page is My Store and is not as expected.
+2022-07-01 11:28:07,620 INFO c.m.s.MyStorePFSteps [main] [Ljava.lang.StackTraceElement;@6e31d989
+2022-07-01 11:28:07,620 ERROR c.m.s.MyStorePFSteps [main] The Blouse could not be clicked 
+2022-07-01 16:15:26,520 ERROR c.m.s.MyStorePFSteps [main] The Current Page is My Store and is not as expected.
+2022-07-01 16:15:27,697 INFO c.m.s.MyStorePFSteps [main] The Blouse was  clicked succesfully.
+2022-07-01 16:15:29,165 INFO c.m.s.FancyBoxFramePFSteps [main] The Blouse QuickView was  displayed succesfully
+2022-07-01 16:15:29,838 INFO c.m.s.FancyBoxFramePFSteps [main] The value Blouse is same as value in  Name
+2022-07-01 16:15:30,753 INFO c.m.s.FancyBoxFramePFSteps [main] The value 2 entered in  Quantity
+2022-07-01 16:15:31,454 INFO c.m.s.FancyBoxFramePFSteps [main] The ADDTOCART was clicked succesfully
+2022-07-01 16:15:32,610 INFO c.m.s.Layer_CartPFSteps [main] The Current Page is as expected
+2022-07-01 16:15:33,254 INFO c.m.s.Layer_CartPFSteps [main] The Product successfully added to your shopping cart was as expected
+2022-07-01 16:15:35,115 INFO c.m.s.Layer_CartPFSteps [main] The Name has expected value Blouse
+2022-07-01 16:15:36,976 INFO c.m.s.Layer_CartPFSteps [main] The PROCEEDTOCHECKOUT was clicked as expected
+2022-07-01 16:15:37,658 INFO c.m.s.Cart_SummaryPFSteps [main] The user is in Cart_Summary Page
+2022-07-01 16:15:43,657 ERROR c.m.s.MyStorePFSteps [main] The Current Page is My Store and is not as expected.
+2022-07-01 16:15:44,773 INFO c.m.s.MyStorePFSteps [main] The Blouse was  clicked succesfully.
+2022-07-01 16:15:46,233 INFO c.m.s.FancyBoxFramePFSteps [main] The Blouse QuickView was  displayed succesfully
+2022-07-01 16:15:46,894 INFO c.m.s.FancyBoxFramePFSteps [main] The value Blouse is same as value in  Name
+2022-07-01 16:15:47,742 INFO c.m.s.FancyBoxFramePFSteps [main] The value 2 entered in  Quantity
+2022-07-01 16:15:48,441 INFO c.m.s.FancyBoxFramePFSteps [main] The ADDTOCART was clicked succesfully
+2022-07-01 16:15:49,507 INFO c.m.s.Layer_CartPFSteps [main] The Current Page is as expected
+2022-07-01 16:15:50,163 INFO c.m.s.Layer_CartPFSteps [main] The Product successfully added to your shopping cart was as expected
+2022-07-01 16:15:52,028 INFO c.m.s.Layer_CartPFSteps [main] The Name has expected value Blouse
+2022-07-01 16:15:52,638 INFO c.m.s.Layer_CartPFSteps [main] The CONTINUESHOPPING was clicked as expected
+2022-07-01 16:15:53,596 INFO c.m.s.MyStorePFSteps [main] The Printed Dress was  clicked succesfully.
+2022-07-01 16:15:55,326 INFO c.m.s.FancyBoxFramePFSteps [main] The Printed Dress QuickView was  displayed succesfully
+2022-07-01 16:15:56,153 INFO c.m.s.FancyBoxFramePFSteps [main] The value Printed Dress is same as value in  Name
+2022-07-01 16:15:57,066 INFO c.m.s.FancyBoxFramePFSteps [main] The value 1 entered in  Quantity
+2022-07-01 16:15:57,741 INFO c.m.s.FancyBoxFramePFSteps [main] The ADDTOCART was clicked succesfully
+2022-07-01 16:15:58,706 INFO c.m.s.Layer_CartPFSteps [main] The Current Page is as expected
+2022-07-01 16:15:59,316 INFO c.m.s.Layer_CartPFSteps [main] The Product successfully added to your shopping cart was as expected
+2022-07-01 16:16:02,062 INFO c.m.s.Layer_CartPFSteps [main] The PROCEEDTOCHECKOUT was clicked as expected
+2022-07-01 16:16:02,662 INFO c.m.s.Cart_SummaryPFSteps [main] The user is in Cart_Summary Page
+2022-07-01 16:16:05,328 ERROR c.m.s.Cart_SummaryPFSteps [main] The Details are not as expected in the cart details 
+2022-07-01 16:16:07,035 ERROR c.m.s.Cart_SummaryPFSteps [main] The PROCEEDTOCHECKOUT could not be clicked succesfully 
+2022-07-01 16:16:11,826 ERROR c.m.s.MyStorePFSteps [main] The Current Page is My Store and is not as expected.
+2022-07-01 16:16:12,928 INFO c.m.s.MyStorePFSteps [main] The Blouse was  clicked succesfully.
+2022-07-01 16:16:14,360 INFO c.m.s.FancyBoxFramePFSteps [main] The Blouse QuickView was  displayed succesfully
+2022-07-01 16:16:14,988 INFO c.m.s.FancyBoxFramePFSteps [main] The value Blouse is same as value in  Name
+2022-07-01 16:16:15,784 INFO c.m.s.FancyBoxFramePFSteps [main] The value 2 entered in  Quantity
+2022-07-01 16:16:16,447 INFO c.m.s.FancyBoxFramePFSteps [main] The ADDTOCART was clicked succesfully
+2022-07-01 16:16:17,509 INFO c.m.s.Layer_CartPFSteps [main] The Current Page is as expected
+2022-07-01 16:16:18,175 INFO c.m.s.Layer_CartPFSteps [main] The Product successfully added to your shopping cart was as expected
+2022-07-01 16:16:20,094 INFO c.m.s.Layer_CartPFSteps [main] The Name has expected value Blouse
+2022-07-01 16:16:20,729 INFO c.m.s.Layer_CartPFSteps [main] The CONTINUESHOPPING was clicked as expected
+2022-07-01 16:16:21,775 INFO c.m.s.MyStorePFSteps [main] The Printed Dress was  clicked succesfully.
+2022-07-01 16:16:24,037 INFO c.m.s.FancyBoxFramePFSteps [main] The Printed Dress QuickView was  displayed succesfully
+2022-07-01 16:16:24,846 INFO c.m.s.FancyBoxFramePFSteps [main] The value Printed Dress is same as value in  Name
+2022-07-01 16:16:25,646 INFO c.m.s.FancyBoxFramePFSteps [main] The value 1 entered in  Quantity
+2022-07-01 16:16:26,245 INFO c.m.s.FancyBoxFramePFSteps [main] The ADDTOCART was clicked succesfully
+2022-07-01 16:16:27,738 INFO c.m.s.Layer_CartPFSteps [main] The Current Page is as expected
+2022-07-01 16:16:28,395 INFO c.m.s.Layer_CartPFSteps [main] The Product successfully added to your shopping cart was as expected
+2022-07-01 16:16:31,017 INFO c.m.s.Layer_CartPFSteps [main] The PROCEEDTOCHECKOUT was clicked as expected
+2022-07-01 16:16:31,635 INFO c.m.s.Cart_SummaryPFSteps [main] The user is in Cart_Summary Page
+2022-07-01 16:16:34,203 ERROR c.m.s.Cart_SummaryPFSteps [main] The Details are not as expected in the cart details 
+2022-07-01 16:16:35,911 ERROR c.m.s.Cart_SummaryPFSteps [main] The PROCEEDTOCHECKOUT could not be clicked succesfully 
+2022-07-01 16:16:37,896 ERROR c.m.s.Login_MyStorePFSteps [main] The login could not be clicked

@@ -14,7 +14,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.mln.utilities.Wrapper_Methods;
+import com.mln.utilities.Common_Utility;
 
 public class FancyBoxFramePF {
 
@@ -51,47 +51,47 @@ public class FancyBoxFramePF {
 
 	public FancyBoxFramePF(WebDriver driver){
 		this.driver =driver;
- 	 WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));    
-     w.until(ExpectedConditions.elementToBeClickable(By.xpath("//iframe[contains(@id,'fancybox-frame')]")));
-	    //System.out.println("hi");
-	    List<WebElement> frames = driver.findElements(By.xpath("//iframe"));
-	  	for (WebElement we : frames ){
-	  		//System.out.println(we.getAttribute("name"));
-	  		if (we.getAttribute("name").contains("fancybox-frame")){
-	  			driver.switchTo().frame(we.getAttribute("name"));
-	  		}
-	  	}
-	  
+		WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));    
+		w.until(ExpectedConditions.elementToBeClickable(By.xpath("//iframe[contains(@id,'fancybox-frame')]")));
+		//System.out.println("hi");
+		List<WebElement> frames = driver.findElements(By.xpath("//iframe"));
+		for (WebElement we : frames ){
+			//System.out.println(we.getAttribute("name"));
+			if (we.getAttribute("name").contains("fancybox-frame")){
+				driver.switchTo().frame(we.getAttribute("name"));
+			}
+		}
+
 		PageFactory.initElements(driver, this);
-		
+
 	}
 
 
-	public void clickAddtoCart(Wrapper_Methods wmobj)
+	public void clickAddtoCart(Common_Utility wmobj) throws Exception
 
 	{
 		wmobj.clickLnkBtn(btnAddtoCart);
 
 	}
 
-	public void enterQuantity(Wrapper_Methods wmobj,String strQuanity)
+	public void enterQuantity(Common_Utility wmobj,String strQuanity) throws Exception
 
 	{
 		wmobj.setValue(txtbxQuantity, strQuanity);
 	}
 
-	public void selectSize(Wrapper_Methods wmobj,String strSize)
+	public void selectSize(Common_Utility wmobj,String strSize) throws Exception
 
 	{
-		wmobj.SelectValuebyText(drpdnSize, strSize);
+		wmobj.selectValuebyText(drpdnSize, strSize);
 	}
 
-	public void selectSize(Wrapper_Methods wmobj,int iColor)
+	public void selectSize(Common_Utility wmobj,int iColor) throws Exception
 
 	{
 		wmobj.clickLnkBtn(colorOptions.get(iColor));
 	}
-	public void selectColor(Wrapper_Methods wmobj,String iColor)
+	public void selectColor(Common_Utility wmobj,String iColor) throws Exception 
 
 	{
 		Iterator<WebElement> iter = colorOptions.iterator();
@@ -103,62 +103,68 @@ public class FancyBoxFramePF {
 
 	}
 
-	public void VerifyElementTxt(Wrapper_Methods wmobj,String strElement, String Value) throws IOException
-
+	public boolean VerifyElementTxt(Common_Utility wmobj,String strElement, String Value) throws Exception{
+	boolean bResult = false;
 	{
 		strElement =(strElement.replace(" ","").trim()).toUpperCase();
 
-		switch(strElement){
-		case "NAME":
-			wmobj.verifyText(txtName, Value);
-			break;
+		try {
+			switch(strElement){
+			case "NAME":
+				bResult=wmobj.verifyText(txtName, Value);
+				break;
 
-		case "MODELNAME":
-			wmobj.verifyText(txtModelName, Value);
-			break;
-		case "CONDITION":
-			wmobj.verifyText(txtModelName, Value);
-			break;
+			case "MODELNAME":
+				bResult=wmobj.verifyText(txtModelName, Value);
+				break;
+			case "CONDITION":
+				bResult=wmobj.verifyText(txtModelName, Value);
+				break;
 
-		case "SHORTDESCRIPTION":
-			wmobj.verifyText(txtShrtDescription,Value);
-			break;
+			case "SHORTDESCRIPTION":
+				bResult=wmobj.verifyText(txtShrtDescription,Value);
+				break;
 
-		case "PRICE":
-			wmobj.verifyText(txtPrice,Value);
-			break;
-		default:
-			throw new IllegalStateException("No such field exists. Please check" );
+			case "PRICE":
+				bResult=wmobj.verifyText(txtPrice,Value);
+				break;
+			default:
+				//throw new IllegalStateException("No such field exists. Please check" );
 
-
-		}
-
-	}
-
-	
-	public void EnterTxt(Wrapper_Methods wmobj, String strElement, String Value){
-		strElement =(strElement.replace(" ","").trim()).toUpperCase();
-		
-		switch(strElement){
-		case "QUANTITY" :
-			enterQuantity(wmobj, Value);
-			break;
-		case "SIZE" :
-			selectSize(wmobj, Value);
-			break;
-		case "COLOR" :
-		case "COLOUR" :
-			selectColor(wmobj, Value);
-			break;	
-		
-		default:
-			throw new IllegalStateException("This is not a correct value: " + strElement);
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			bResult = false;
 		}
 	}
+	return bResult;
 
-	public WebElement getTxtName() {
-		return txtName;
+}
+
+
+public void EnterTxt(Common_Utility wmobj, String strElement, String Value) throws Exception{
+	strElement =(strElement.replace(" ","").trim()).toUpperCase();
+
+	switch(strElement){
+	case "QUANTITY" :
+		enterQuantity(wmobj, Value);
+		break;
+	case "SIZE" :
+		selectSize(wmobj, Value);
+		break;
+	case "COLOR" :
+	case "COLOUR" :
+		selectColor(wmobj, Value);
+		break;	
+
+	default:
+		throw new IllegalStateException("This is not a correct value: " + strElement);
 	}
+}
+
+public WebElement getTxtName() {
+	return txtName;
+}
 
 
 

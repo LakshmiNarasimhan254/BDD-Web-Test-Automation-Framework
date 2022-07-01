@@ -16,7 +16,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.mln.utilities.Wrapper_Methods;
+import com.mln.utilities.Common_Utility;
 
 public class Cart_SummaryPF {
 	WebDriver driver;
@@ -29,10 +29,10 @@ public class Cart_SummaryPF {
 
 	@FindBy(xpath="//table[@id='cart_summary']")
 	private WebElement tbleCartSummary;
-	
+
 	@FindBy(xpath="//p[@class='cart_navigation clearfix']/a[@title ='Proceed to checkout']")
 	private WebElement btnProceedtoCheckout;
-	
+
 	@FindBy(xpath="//p[@class='cart_navigation clearfix']/a[@title ='Continue shopping']")
 	private WebElement btnContShopping;
 
@@ -54,10 +54,11 @@ public class Cart_SummaryPF {
 		return productList;
 	}
 
-	private HashMap<String, String> getcartLineDetails(WebDriver driver){
+	private HashMap<String, String> getcartLineDetails(WebDriver driver)throws Exception {
 		Iterator<WebElement> iter = cartItems(driver).iterator();
 		HashMap<String,String>hm = new HashMap<String, String>();
-		//List<WebElement> productdetails  = new ArrayList();
+
+
 		int iHashMapKey =0;
 		while(iter.hasNext()){
 			iHashMapKey= iHashMapKey+1;
@@ -107,62 +108,71 @@ public class Cart_SummaryPF {
 
 		}
 
-		
+
 		return hm;
 	}
 
-	public WebElement getTxtCartSummary() {
+	public WebElement getTxtCartSummary() throws Exception{
 		return txtCartSummary;
 	}
 
 
-	public void verifyCartDetails(Wrapper_Methods wmobj,String StrValue) throws IOException{
+	public boolean verifyCartDetails(Common_Utility wmobj,String StrValue) throws Exception{
+		boolean bResult = false;
 		String[] StrValues=null;
 
-		if (!(StrValue.contains("|"))){
-			StrValues = StrValue.split(",");
-			for (String s : StrValues){
-				if (s.contains(".")){
-					s.replaceAll(".", "");
-					String StrKeyValue = (s.split(":=")[0]).replace(" ", "").toUpperCase();
-					String StrExpectedValue = (s.split(":=")[1]);
-					//System.out.println(StrKeyValue);
-					wmobj.verifyText(getcartLineDetails(driver).get(StrKeyValue),StrExpectedValue);					
-				}
-			}
-		}else{	
-			StrValues=StrValue.split(Pattern.quote("|"));
-			String[] s1;
-			for (String s :StrValues){
-				s1= s.split(",");
-				for (String s2 : s1){
-					if (s2.contains(".")){
-						String s3 = s2.replaceAll("\\.", "");
-						//System.out.println(s2);
-						String StrKeyValue = (s3.split(":=")[0]).replace(" ", "").toUpperCase();
-						String StrExpectedValue = (s3.split(":=")[1]);
-						//System.out.println("This is thE key value " +StrKeyValue);
-						
-						//System.out.println(getcartLineDetails(driver).get(StrKeyValue));
-						wmobj.verifyText((getcartLineDetails(driver).get(StrKeyValue).trim()),StrExpectedValue);					
+		//try {
+			if (!(StrValue.contains("|"))){
+				StrValues = StrValue.split(",");
+				for (String s : StrValues){
+					if (s.contains(".")){
+						s.replaceAll(".", "");
+						String StrKeyValue = (s.split(":=")[0]).replace(" ", "").toUpperCase();
+						String StrExpectedValue = (s.split(":=")[1]);
+						//System.out.println(StrKeyValue);
+						bResult= wmobj.verifyText(getcartLineDetails(driver).get(StrKeyValue),StrExpectedValue);					
 					}
 				}
+			}else{	
+				StrValues=StrValue.split(Pattern.quote("|"));
+				String[] s1;
+				for (String s :StrValues){
+					s1= s.split(",");
+					for (String s2 : s1){
+						if (s2.contains(".")){
+							String s3 = s2.replaceAll("\\.", "");
+							//System.out.println(s2);
+							String StrKeyValue = (s3.split(":=")[0]).replace(" ", "").toUpperCase();
+							String StrExpectedValue = (s3.split(":=")[1]);
+							//System.out.println("This is thE key value " +StrKeyValue);
+
+							//System.out.println(getcartLineDetails(driver).get(StrKeyValue));
+							bResult=wmobj.verifyText((getcartLineDetails(driver).get(StrKeyValue).trim()),StrExpectedValue);					
+						}
+					}
 
 
-			}}
+				}
+			}
+			
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		return bResult;
 
 
 
 	}
-	
-	public void clickProceedtoCheckout(Wrapper_Methods wmobj)
+
+	public void clickProceedtoCheckout(Common_Utility wmobj) throws Exception
 
 	{
 		wmobj.clickLnkBtn(btnProceedtoCheckout);
 
 	}
-	
-	public void clickContShopping(Wrapper_Methods wmobj)
+
+	public void clickContShopping(Common_Utility wmobj) throws Exception
 
 	{
 		wmobj.clickLnkBtn(btnContShopping);

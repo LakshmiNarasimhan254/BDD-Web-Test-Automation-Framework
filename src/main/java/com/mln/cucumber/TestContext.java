@@ -1,18 +1,18 @@
 package com.mln.cucumber;
 
 import com.mln.managers.DriverManager;
-import com.mln.managers.PageObjectManager;
-import com.mln.utilities.Wrapper_Methods;
+import com.mln.managers.PageFactoryManager;
+import com.mln.utilities.Common_Utility;
 
 public class TestContext {
 	private DriverManager driverManager;
-	private PageObjectManager pageObjectManager;
-	private Wrapper_Methods wrappermethods;
+	private PageFactoryManager pageFactoryManager;
+	private Common_Utility common_Utility;
 	
 	public TestContext(){
 		driverManager = new DriverManager();
-		pageObjectManager = new PageObjectManager(driverManager.getDriver());
-		wrappermethods = new Wrapper_Methods(driverManager.getDriver());
+		pageFactoryManager = new PageFactoryManager(driverManager.getDriver());
+		common_Utility = new Common_Utility(driverManager.getDriver());
 		
 	}
 	
@@ -21,17 +21,17 @@ public class TestContext {
 		return driverManager;
 	}
 	
-	public PageObjectManager getPageObjectManager() {
-		return pageObjectManager;
+	public PageFactoryManager getPageFactoryManager() {
+		return pageFactoryManager;
 	}
 	
-	public Wrapper_Methods getWrapperMethods(String sTest) {
-		return wrappermethods;
+	public Common_Utility getCommon_Utility(String sTest) {
+		return common_Utility;
 	}
 
-	public Wrapper_Methods getWrapperMethods() {
+	public Common_Utility getCommon_Utility() {
 		// TODO Auto-generated method stub
-		return wrappermethods;
+		return common_Utility;
 	}
 
 }

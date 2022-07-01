@@ -10,10 +10,12 @@ import java.util.Properties;
 
 import com.mln.enums.BrowserType;
 import com.mln.enums.EnvironmentType;
+import com.mln.enums.ScreenShotType;
 
 public class ConfigFileReader {
+	//private static final String ALL = ALL;
 	private Properties properties = new Properties();
-	private final String propertyFilePath= "config/Config.properties";
+	private final String propertyFilePath= "src/test/resources/Config.properties";
 	
 
 
@@ -70,16 +72,24 @@ public class ConfigFileReader {
 	}
 
 	public String getApplicationUrl() {
-		String url = getProperties("url");
+		String url = getProperties("APP_URL");
 		if(url != null) return url;
+		else throw new RuntimeException("Application Url not specified in the Configuration.properties file for the Key:url");
+	}
+	
+	public String getScreeShotSettings() {
+		String ScreeShotSettings = getProperties("SCREENSHOT_SETTING");
+		if(ScreeShotSettings == null || ScreeShotSettings.equalsIgnoreCase("all")) return ScreenShotType.ALL.toString();
+		else if(ScreeShotSettings.equalsIgnoreCase("passed")) return ScreenShotType.PASSED.toString();
+		else if(ScreeShotSettings.equalsIgnoreCase("failed")) return ScreenShotType.FAILED.toString();
 		else throw new RuntimeException("Application Url not specified in the Configuration.properties file for the Key:url");
 	}
 
 	public BrowserType getBrowser() {
-		String browserName = getProperties("browser");
-		if(browserName == null || browserName.equals("chrome")) return BrowserType.CHROME;
+		String browserName = getProperties("BROWSER");
+		if(browserName == null || browserName.equalsIgnoreCase("chrome")) return BrowserType.CHROME;
 		else if(browserName.equalsIgnoreCase("firefox")) return BrowserType.FIREFOX;
-		else if(browserName.equals("iexplorer")) return BrowserType.INTERNETEXPLORER;
+		else if(browserName.equalsIgnoreCase("iexplorer")) return BrowserType.INTERNETEXPLORER;
 		else throw new RuntimeException("Browser Name Key value in Configuration.properties is not matched : " + browserName);
 	}
 
