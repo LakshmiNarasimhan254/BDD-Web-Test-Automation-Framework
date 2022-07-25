@@ -18,7 +18,7 @@
 #Sample Feature Definition Template
 Feature: This is a feature file for Creating an user
 
-  @functional @Smoke
+@Smoke
   Scenario:TCS1
    #To give a email id to create a user
     Given The user is in MyStore Page
@@ -32,7 +32,7 @@ Feature: This is a feature file for Creating an user
   #	And The user Clicks on <Register> in Login_MyStoreExt Page
   	
 
-  @functional @Smoke
+ @Smoke
   Scenario:TCS2 
   #To give a email id to create a users
     Given The user is in MyStore Page

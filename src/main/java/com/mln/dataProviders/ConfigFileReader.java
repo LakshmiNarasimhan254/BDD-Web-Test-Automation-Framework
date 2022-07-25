@@ -27,10 +27,10 @@ public class ConfigFileReader {
 			return properties.getProperty(strKey);
 
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		return strKey;
@@ -44,7 +44,7 @@ public class ConfigFileReader {
 			properties.setProperty(strKey, strKeyValue);
 			properties.save(output, null);
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		

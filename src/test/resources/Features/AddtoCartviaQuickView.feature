@@ -1,6 +1,6 @@
 Feature: To click on my Popular Products
 
-  @smoke 
+    @functional
   Scenario: TCS3
     #To click on my Popular Products
     Given The user is in MyStore Page

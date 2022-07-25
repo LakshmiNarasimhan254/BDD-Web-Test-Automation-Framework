@@ -133,7 +133,7 @@ public class FancyBoxFramePF {
 
 			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			bResult = false;
 		}
 	}

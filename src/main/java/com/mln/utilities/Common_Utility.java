@@ -11,6 +11,7 @@ import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -52,7 +53,7 @@ public class Common_Utility {
 
 			xlrpt.reportEvent(strResult, "PASS",sFinalPath,iRun);
 		} catch (WebDriverException e) {
-			// TODO Auto-generated catch block
+			
 			strResult ="The browser has not been launched";
 			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
 		}
@@ -68,157 +69,164 @@ public class Common_Utility {
 	}
 	public void setValue(WebElement element, String val) throws Exception  {
 		//try {
-			element.clear();
-			element.sendKeys(val);
-			//strResult = "Value " + val + " entered successfully" ;
-			//xlrpt.reportEvent(strResult, "PASS",sFinalPath,iRun);
-//		} catch (NoSuchElementException e) {
-//			strResult ="The browser is not available." + e.getMessage();
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
-//		}catch (WebDriverException e1){
-//			strResult ="The browser is not available.";
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);		
-//		} catch(Exception e2){
-//			strResult ="An exception occured";
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);			
-//		}finally {
-			//takeScreen();
-			//xlrpt.reportSnapshot(sFinalPath);
+		
+		element.clear();
+		element.sendKeys(val);
+		highLighterMethod(element);
+		//strResult = "Value " + val + " entered successfully" ;
+		//xlrpt.reportEvent(strResult, "PASS",sFinalPath,iRun);
+		//		} catch (NoSuchElementException e) {
+		//			strResult ="The browser is not available." + e.getMessage();
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
+		//		}catch (WebDriverException e1){
+		//			strResult ="The browser is not available.";
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);		
+		//		} catch(Exception e2){
+		//			strResult ="An exception occured";
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);			
+		//		}finally {
+		//takeScreen();
+		//xlrpt.reportSnapshot(sFinalPath);
 
-//		}
+		//		}
 
 	}
 	public void clickLnkBtn(WebElement element) throws Exception{
 		//try{
-			element.click();
+		highLighterMethod(element);
+		element.click();
 		//	strResult = "Button clicked successfully";
 		//	xlrpt.reportEvent(strResult, "PASS",sFinalPath,iRun);
-//		}catch (NoSuchElementException e) {
-//			strResult ="The browser is not available." + e.getMessage();
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
-//		} catch (WebDriverException e1){
-//			strResult ="The browser is not available.";
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);		
-//		} catch(Exception e2){
-//			strResult ="An exception occured" + e2.getCause();
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);			
-//		} finally {
-//			//takeScreen(/);
-//			//xlrpt.reportSnapshot(sFinalPath);
-//
-//		}
+		//		}catch (NoSuchElementException e) {
+		//			strResult ="The browser is not available." + e.getMessage();
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
+		//		} catch (WebDriverException e1){
+		//			strResult ="The browser is not available.";
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);		
+		//		} catch(Exception e2){
+		//			strResult ="An exception occured" + e2.getCause();
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);			
+		//		} finally {
+		//			//takeScreen(/);
+		//			//xlrpt.reportSnapshot(sFinalPath);
+		//
+		//		}
 	}
 	public boolean verifyText(WebElement element, String sVal) throws Exception{
 		boolean bResult = false;
+		highLighterMethod(element);
 		//try {
-			String sValue = element.getText();
-			//System.out.println(sValue);
-			if(sVal.equals(sValue)){
-				bResult = true;
-				//strResult = "The Actual Text value " + sVal +" is displayed";
-				//xlrpt.reportEvent(strResult, "PASS",sFinalPath,iRun);
-			}
-			else
-			{	
-				bResult = false;
-				//strResult = "The Actual Text value " + sVal +" is not displayed but the value "+ sValue + " is displayed";
-				//xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
-			}	
-//		}catch (NoSuchElementException e) {
-//			bResult = false;
-//			strResult ="The element is not found or not visible.";
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
-//		} catch (WebDriverException e1){
-//			bResult = false;
-//			strResult ="The browser is not available.";
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);			
-//		} catch(Exception e2){
-//			bResult = false;
-//			strResult ="An exception occured.";
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);				
-//		} finally {
-//
-//			//takeScreen();
-//			//xlrpt.reportSnapshot(sFinalPath);
-//
-//		}
+		String sValue = element.getText();
+		//System.out.println(sValue);
+		if(sVal.equals(sValue)){
+			bResult = true;
+			//strResult = "The Actual Text value " + sVal +" is displayed";
+			//xlrpt.reportEvent(strResult, "PASS",sFinalPath,iRun);
+		}
+		else
+		{	
+			bResult = false;
+			//strResult = "The Actual Text value " + sVal +" is not displayed but the value "+ sValue + " is displayed";
+			//xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
+		}	
+		//		}catch (NoSuchElementException e) {
+		//			bResult = false;
+		//			strResult ="The element is not found or not visible.";
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
+		//		} catch (WebDriverException e1){
+		//			bResult = false;
+		//			strResult ="The browser is not available.";
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);			
+		//		} catch(Exception e2){
+		//			bResult = false;
+		//			strResult ="An exception occured.";
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);				
+		//		} finally {
+		//
+		//			//takeScreen();
+		//			//xlrpt.reportSnapshot(sFinalPath);
+		//
+		//		}
 		return bResult;
 	}
 
 
 	public boolean verifyText(String ActualVal, String ExpectedVal) throws Exception{
 		boolean bResult = false;
+		highLighterMethod(element);
 		//try {
-			//String sValue = element.getText();
+		//String sValue = element.getText();
 
-			if(ActualVal.equals(ExpectedVal)){
-				bResult = true;
-				//strResult = "The Actual Text value " + ActualVal +" is displayed";
-				//xlrpt.reportEvent(strResult, "PASS",sFinalPath,iRun);
-			}
-			else
-			{	
-				bResult = false;
-				//strResult = "The Actual Text value " + ActualVal +" is not displayed";
-				//xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
-			}	
-//		}catch (NoSuchElementException e) {
-//			bResult = false;
-//			strResult ="The element is not found or not visible.";
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
-//		} catch (WebDriverException e1){
-//			bResult = false;
-//			strResult ="The browser is not available.";
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);			
-//		} catch(Exception e2){
-//			bResult = false;
-//			strResult ="An exception occured.";
-//			e2.printStackTrace();
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);				
-//		} finally {
-//
-//			//takeScreen();
-//			//xlrpt.reportSnapshot(sFinalPath);
-//
-//		}
-		return bResult;
+		if(ActualVal.equals(ExpectedVal)){
+			bResult = true;
+			//strResult = "The Actual Text value " + ActualVal +" is displayed";
+			//xlrpt.reportEvent(strResult, "PASS",sFinalPath,iRun);
 		}
+		else
+		{	
+			bResult = false;
+			//strResult = "The Actual Text value " + ActualVal +" is not displayed";
+			//xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
+		}	
+		//		}catch (NoSuchElementException e) {
+		//			bResult = false;
+		//			strResult ="The element is not found or not visible.";
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
+		//		} catch (WebDriverException e1){
+		//			bResult = false;
+		//			strResult ="The browser is not available.";
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);			
+		//		} catch(Exception e2){
+		//			bResult = false;
+		//			strResult ="An exception occured.";
+		//			e2.printStackTrace();
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);				
+		//		} finally {
+		//
+		//			//takeScreen();
+		//			//xlrpt.reportSnapshot(sFinalPath);
+		//
+		//		}
+		return bResult;
+	}
 
 	public boolean verifyContainsText(WebElement element, String sVal) throws Exception{
 		boolean bResult = false;
 		//try {
-			String sValue = element.getText().trim();
-			//System.out.println(sValue);
-			if(sValue.contains(sVal.trim())){
-				bResult = true;
+		highLighterMethod(element);
+		String sValue = element.getText().trim();
+		//System.out.println(sValue);
+		if(sValue.contains(sVal.trim())){
+			
+			bResult = true;
 
-				//strResult = "The Actual Text value " + sVal +" is displayed";
-				//xlrpt.reportEvent(strResult, "PASS",sFinalPath,iRun);
-			}
-			else
-			{
-				bResult = false;
-				//strResult = "The Actual Text value " + sVal +" is not displayed but the value "+ sValue + " is displayed";
-				//xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
-			}	
-//		}catch (NoSuchElementException e) {
-//			bResult = false;
-//			strResult ="The element is not found or not visible.";
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
-//		} catch (WebDriverException e1){
-//			bResult = false;
-//			strResult ="The browser is not available.";
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);			
-//		} catch(Exception e2){
-//			bResult = false;
-//			strResult ="An exception occured.";
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);				
-//		} finally {
-//
-//			//takeScreen();
-//			//xlrpt.reportSnapshot(sFinalPath);
-//
-//		}
+			//strResult = "The Actual Text value " + sVal +" is displayed";
+			//xlrpt.reportEvent(strResult, "PASS",sFinalPath,iRun);
+		}
+		else
+		{
+			bResult = false;
+			//strResult = "The Actual Text value " + sVal +" is not displayed but the value "+ sValue + " is displayed";
+			//xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
+		}	
+		//		}catch (NoSuchElementException e) {
+		//			bResult = false;
+		//			strResult ="The element is not found or not visible.";
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
+		//		} catch (WebDriverException e1){
+		//			bResult = false;
+		//			strResult ="The browser is not available.";
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);			
+		//		} catch(Exception e2){
+		//			bResult = false;
+		//			strResult ="An exception occured.";
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);				
+		//		} finally {
+		//
+		//			//takeScreen();
+		//			//xlrpt.reportSnapshot(sFinalPath);
+		//
+		//		}
 		return bResult;
 	}
 
@@ -241,151 +249,160 @@ public class Common_Utility {
 		boolean bResult =false;
 		//try {
 
-			if(element.isDisplayed()){
-				bResult =true;
-				//strResult = "The " + element.getAccessibleName() +" is displayed";
-				//xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
-			}
-			else
-			{
-				bResult =false;
-				//strResult = "The " + element.getAccessibleName() +" is not displayed";
-				//xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
-			}	
-//		}catch (NoSuchElementException e) {
-//			strResult ="The browser is not available." + e.getMessage();
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
-//		} catch (WebDriverException e1){
-//			strResult ="The browser is not available." + e1.getMessage();
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);			
-//		} catch(Exception e2){
-//			strResult ="An exception occured.";
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);				
-//		} finally {
-//
-//			//takeScreen();
-//			//xlrpt.reportSnapshot(sFinalPath);
-//
-//		}
+		if(element.isDisplayed()){
+			highLighterMethod(element);
+			bResult =true;
+			//strResult = "The " + element.getAccessibleName() +" is displayed";
+			//xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
+		}
+		else
+		{
+			bResult =false;
+			//strResult = "The " + element.getAccessibleName() +" is not displayed";
+			//xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
+		}	
+		//		}catch (NoSuchElementException e) {
+		//			strResult ="The browser is not available." + e.getMessage();
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
+		//		} catch (WebDriverException e1){
+		//			strResult ="The browser is not available." + e1.getMessage();
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);			
+		//		} catch(Exception e2){
+		//			strResult ="An exception occured.";
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);				
+		//		} finally {
+		//
+		//			//takeScreen();
+		//			//xlrpt.reportSnapshot(sFinalPath);
+		//
+		//		}
 		return bResult;
 	}
 
 
 	public void selectValuebyText(WebElement element, String val)throws Exception {
 		//try {
-			Select sel =new Select(element);
-			//sel.deselectAll();
-			sel.selectByVisibleText(val);
-//			//strResult = "Value my name  " + val + " selected successfully" ;
-//			//xlrpt.reportEvent(strResult, "PASS",sFinalPath,iRun);
-//		}catch (NoSuchElementException e) {
-//			//strResult ="The browser is not available." + e.getMessage();
-//			//xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
-//		}catch (WebDriverException e1){
-//		//strResult ="The browser is not available." + e1.getRawMessage();
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);		
-//		} catch(Exception e2){
-//			strResult ="An exception occured";
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);			
-//		}finally {
-//			//takeScreen();
-//			//xlrpt.reportSnapshot(sFinalPath);
-//		}
+		Select sel =new Select(element);
+		//sel.deselectAll();
+		sel.selectByVisibleText(val);
+		highLighterMethod(element);
+		//			//strResult = "Value my name  " + val + " selected successfully" ;
+		//			//xlrpt.reportEvent(strResult, "PASS",sFinalPath,iRun);
+		//		}catch (NoSuchElementException e) {
+		//			//strResult ="The browser is not available." + e.getMessage();
+		//			//xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
+		//		}catch (WebDriverException e1){
+		//		//strResult ="The browser is not available." + e1.getRawMessage();
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);		
+		//		} catch(Exception e2){
+		//			strResult ="An exception occured";
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);			
+		//		}finally {
+		//			//takeScreen();
+		//			//xlrpt.reportSnapshot(sFinalPath);
+		//		}
 	}
 
 	public void selectValuebyValue(WebElement element, String val) throws Exception {
-	//	try {
-			Select sel =new Select(element);
-			//sel.deselectAll();
-			sel.selectByValue(val);
-//			strResult = "Value my name " + val + " selected successfully" ;
-//			xlrpt.reportEvent(strResult, "PASS",sFinalPath,iRun);
-//		}catch (NoSuchElementException e) {
-//			strResult ="The browser is not available." + e.getMessage();
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
-//		}catch (WebDriverException e1){
-//			strResult ="The browser is not available." + e1.getRawMessage();
-//			//e1.printStackTrace();
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);		
-//		} catch(Exception e2){
-//			strResult ="An exception occured";
-//			e2.printStackTrace();
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);			
-//		}finally {
-//			//takeScreen();
-//			//xlrpt.reportSnapshot(sFinalPath);
-//		}
+		//	try {
+		Select sel =new Select(element);
+		
+		//sel.deselectAll();
+		sel.selectByValue(val);
+		highLighterMethod(element);
+		//			strResult = "Value my name " + val + " selected successfully" ;
+		//			xlrpt.reportEvent(strResult, "PASS",sFinalPath,iRun);
+		//		}catch (NoSuchElementException e) {
+		//			strResult ="The browser is not available." + e.getMessage();
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
+		//		}catch (WebDriverException e1){
+		//			strResult ="The browser is not available." + e1.getRawMessage();
+		//			//e1.printStackTrace();
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);		
+		//		} catch(Exception e2){
+		//			strResult ="An exception occured";
+		//			e2.printStackTrace();
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);			
+		//		}finally {
+		//			//takeScreen();
+		//			//xlrpt.reportSnapshot(sFinalPath);
+		//		}
 	}
 
 	public void selectValuebyIndex(WebElement element, int val) throws Exception{
 		//try {
-			Select sel =new Select(element);
-			//sel.deselectAll();
-			sel.selectByIndex(val);
-			String Value = sel.getFirstSelectedOption().getText();
-//			strResult = "The " + Value + " in the Index " + val +" is selected successfully" ;
-//			xlrpt.reportEvent(strResult, "PASS",sFinalPath,iRun);
-//		}catch (NoSuchElementException e) {
-//			strResult ="The browser is not available." + e.getMessage();
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
-//		}catch (WebDriverException e1){
-//			strResult ="The browser is not available.";
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);		
-//		} catch(Exception e2){
-//			strResult ="An exception occured";
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);			
-//		}finally {
-//			//takeScreen();
-//			//xlrpt.reportSnapshot(sFinalPath);
-//		}
+		Select sel =new Select(element);
+		//sel.deselectAll();
+		sel.selectByIndex(val);
+		highLighterMethod(element);
+		String Value = sel.getFirstSelectedOption().getText();
+		//			strResult = "The " + Value + " in the Index " + val +" is selected successfully" ;
+		//			xlrpt.reportEvent(strResult, "PASS",sFinalPath,iRun);
+		//		}catch (NoSuchElementException e) {
+		//			strResult ="The browser is not available." + e.getMessage();
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
+		//		}catch (WebDriverException e1){
+		//			strResult ="The browser is not available.";
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);		
+		//		} catch(Exception e2){
+		//			strResult ="An exception occured";
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);			
+		//		}finally {
+		//			//takeScreen();
+		//			//xlrpt.reportSnapshot(sFinalPath);
+		//		}
 	}
 
 
 	public void selectRadioButton(WebElement element)throws Exception{
 		//try {
-			if (element.isSelected()){
+		if (element.isSelected()){
+			highLighterMethod(element);
 
-			}else{
-				element.click();
-			}						
-//			strResult = "The Radio button is selected successfully" ;
-//			xlrpt.reportEvent(strResult, "PASS",sFinalPath,iRun);
-//		}catch (NoSuchElementException e) {
-//			strResult ="The browser is not available." + e.getMessage();
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
-//		}catch (WebDriverException e1){
-//			strResult ="The browser is not available.";
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);		
-//		} catch(Exception e2){
-//			strResult ="An exception occured";
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);			
-//		}finally {
-//			//takeScreen();
-//			//xlrpt.reportSnapshot(sFinalPath);
-//		}
+		}else{
+			element.click();
+			highLighterMethod(element);
+		}						
+		//			strResult = "The Radio button is selected successfully" ;
+		//			xlrpt.reportEvent(strResult, "PASS",sFinalPath,iRun);
+		//		}catch (NoSuchElementException e) {
+		//			strResult ="The browser is not available." + e.getMessage();
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
+		//		}catch (WebDriverException e1){
+		//			strResult ="The browser is not available.";
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);		
+		//		} catch(Exception e2){
+		//			strResult ="An exception occured";
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);			
+		//		}finally {
+		//			//takeScreen();
+		//			//xlrpt.reportSnapshot(sFinalPath);
+		//		}
 	}
 	public void deselectRadioButton(WebElement element)throws Exception {
 		//try {
-			if (!element.isSelected()){
+		if (!element.isSelected()){
+			highLighterMethod(element);
 
-			}else{
-				element.click();
-			}						
-//			strResult = "The Radio button is deselected successfully" ;
-//			xlrpt.reportEvent(strResult, "PASS",sFinalPath,iRun);
-//		}catch (NoSuchElementException e) {
-//			strResult ="The browser is not available." + e.getMessage();
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
-//		}catch (WebDriverException e1){
-//			strResult ="The browser is not available." + e1.getMessage();
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);		
-//		} catch(Exception e2){
-//			strResult ="An exception occured";
-//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);			
-//		}finally {
-//			//takeScreen();
-//			//xlrpt.reportSnapshot(sFinalPath);
-//		}
+		}else{
+			element.click();
+			highLighterMethod(element);
+		}						
+		//			strResult = "The Radio button is deselected successfully" ;
+		//			xlrpt.reportEvent(strResult, "PASS",sFinalPath,iRun);
+		//		}catch (NoSuchElementException e) {
+		//			strResult ="The browser is not available." + e.getMessage();
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);
+		//		}catch (WebDriverException e1){
+		//			strResult ="The browser is not available." + e1.getMessage();
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);		
+		//		} catch(Exception e2){
+		//			strResult ="An exception occured";
+		//			xlrpt.reportEvent(strResult, "FAIL",sFinalPath,iRun);			
+		//		}finally {
+		//			//takeScreen();
+		//			//xlrpt.reportSnapshot(sFinalPath);
+		//		}
 	}
 
 
@@ -420,7 +437,7 @@ public class Common_Utility {
 			System.out.println(sFinalPath);
 			xlrpt = new Excel_Reports(sTest);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 
@@ -440,12 +457,12 @@ public class Common_Utility {
 	public void switchFramebyName(WebElement We){
 		adriver.switchTo().frame(We);
 	}
-	
+
 	public  String getCurrentUrl(){
 		adriver.getCurrentUrl();
 		return adriver.getCurrentUrl();
 	}
-	
+
 	public  String getTitle(){
 		adriver.getTitle();
 		return adriver.getTitle();
@@ -463,7 +480,7 @@ public class Common_Utility {
 		}		
 		return hm;
 	}
-	
+
 	public void UpdateExcelReport(String strResult,String strStatus ){
 		xlrpt.reportEvent(strResult, strStatus,sFinalPath,iRun);
 		String ssSetting = FileReaderManager.getInstance().getConfigReader().getScreeShotSettings();
@@ -478,6 +495,12 @@ public class Common_Utility {
 		}
 	}
 
+	public void highLighterMethod(WebElement element){
+		JavascriptExecutor js = (JavascriptExecutor) adriver;
+		js.executeScript("arguments[0]."
+				+ "setAttribute('style', 'background: yellow; border: 2px solid red;');"
+				, element);
+	}
 }
 
 

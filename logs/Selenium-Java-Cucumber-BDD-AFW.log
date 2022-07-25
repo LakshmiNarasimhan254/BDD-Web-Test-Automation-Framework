@@ -1,58 +1,300 @@
-2022-07-01 11:15:13,085 ERROR c.m.s.MyStorePFSteps [main] The Current Page is My Store and is not as expected.
-2022-07-01 11:27:37,200 ERROR c.m.s.MyStorePFSteps [main] The Current Page is My Store and is not as expected.
-2022-07-01 11:28:07,620 INFO c.m.s.MyStorePFSteps [main] [Ljava.lang.StackTraceElement;@6e31d989
-2022-07-01 11:28:07,620 ERROR c.m.s.MyStorePFSteps [main] The Blouse could not be clicked 
-2022-07-01 16:15:26,520 ERROR c.m.s.MyStorePFSteps [main] The Current Page is My Store and is not as expected.
-2022-07-01 16:15:27,697 INFO c.m.s.MyStorePFSteps [main] The Blouse was  clicked succesfully.
-2022-07-01 16:15:29,165 INFO c.m.s.FancyBoxFramePFSteps [main] The Blouse QuickView was  displayed succesfully
-2022-07-01 16:15:29,838 INFO c.m.s.FancyBoxFramePFSteps [main] The value Blouse is same as value in  Name
-2022-07-01 16:15:30,753 INFO c.m.s.FancyBoxFramePFSteps [main] The value 2 entered in  Quantity
-2022-07-01 16:15:31,454 INFO c.m.s.FancyBoxFramePFSteps [main] The ADDTOCART was clicked succesfully
-2022-07-01 16:15:32,610 INFO c.m.s.Layer_CartPFSteps [main] The Current Page is as expected
-2022-07-01 16:15:33,254 INFO c.m.s.Layer_CartPFSteps [main] The Product successfully added to your shopping cart was as expected
-2022-07-01 16:15:35,115 INFO c.m.s.Layer_CartPFSteps [main] The Name has expected value Blouse
-2022-07-01 16:15:36,976 INFO c.m.s.Layer_CartPFSteps [main] The PROCEEDTOCHECKOUT was clicked as expected
-2022-07-01 16:15:37,658 INFO c.m.s.Cart_SummaryPFSteps [main] The user is in Cart_Summary Page
-2022-07-01 16:15:43,657 ERROR c.m.s.MyStorePFSteps [main] The Current Page is My Store and is not as expected.
-2022-07-01 16:15:44,773 INFO c.m.s.MyStorePFSteps [main] The Blouse was  clicked succesfully.
-2022-07-01 16:15:46,233 INFO c.m.s.FancyBoxFramePFSteps [main] The Blouse QuickView was  displayed succesfully
-2022-07-01 16:15:46,894 INFO c.m.s.FancyBoxFramePFSteps [main] The value Blouse is same as value in  Name
-2022-07-01 16:15:47,742 INFO c.m.s.FancyBoxFramePFSteps [main] The value 2 entered in  Quantity
-2022-07-01 16:15:48,441 INFO c.m.s.FancyBoxFramePFSteps [main] The ADDTOCART was clicked succesfully
-2022-07-01 16:15:49,507 INFO c.m.s.Layer_CartPFSteps [main] The Current Page is as expected
-2022-07-01 16:15:50,163 INFO c.m.s.Layer_CartPFSteps [main] The Product successfully added to your shopping cart was as expected
-2022-07-01 16:15:52,028 INFO c.m.s.Layer_CartPFSteps [main] The Name has expected value Blouse
-2022-07-01 16:15:52,638 INFO c.m.s.Layer_CartPFSteps [main] The CONTINUESHOPPING was clicked as expected
-2022-07-01 16:15:53,596 INFO c.m.s.MyStorePFSteps [main] The Printed Dress was  clicked succesfully.
-2022-07-01 16:15:55,326 INFO c.m.s.FancyBoxFramePFSteps [main] The Printed Dress QuickView was  displayed succesfully
-2022-07-01 16:15:56,153 INFO c.m.s.FancyBoxFramePFSteps [main] The value Printed Dress is same as value in  Name
-2022-07-01 16:15:57,066 INFO c.m.s.FancyBoxFramePFSteps [main] The value 1 entered in  Quantity
-2022-07-01 16:15:57,741 INFO c.m.s.FancyBoxFramePFSteps [main] The ADDTOCART was clicked succesfully
-2022-07-01 16:15:58,706 INFO c.m.s.Layer_CartPFSteps [main] The Current Page is as expected
-2022-07-01 16:15:59,316 INFO c.m.s.Layer_CartPFSteps [main] The Product successfully added to your shopping cart was as expected
-2022-07-01 16:16:02,062 INFO c.m.s.Layer_CartPFSteps [main] The PROCEEDTOCHECKOUT was clicked as expected
-2022-07-01 16:16:02,662 INFO c.m.s.Cart_SummaryPFSteps [main] The user is in Cart_Summary Page
-2022-07-01 16:16:05,328 ERROR c.m.s.Cart_SummaryPFSteps [main] The Details are not as expected in the cart details 
-2022-07-01 16:16:07,035 ERROR c.m.s.Cart_SummaryPFSteps [main] The PROCEEDTOCHECKOUT could not be clicked succesfully 
-2022-07-01 16:16:11,826 ERROR c.m.s.MyStorePFSteps [main] The Current Page is My Store and is not as expected.
-2022-07-01 16:16:12,928 INFO c.m.s.MyStorePFSteps [main] The Blouse was  clicked succesfully.
-2022-07-01 16:16:14,360 INFO c.m.s.FancyBoxFramePFSteps [main] The Blouse QuickView was  displayed succesfully
-2022-07-01 16:16:14,988 INFO c.m.s.FancyBoxFramePFSteps [main] The value Blouse is same as value in  Name
-2022-07-01 16:16:15,784 INFO c.m.s.FancyBoxFramePFSteps [main] The value 2 entered in  Quantity
-2022-07-01 16:16:16,447 INFO c.m.s.FancyBoxFramePFSteps [main] The ADDTOCART was clicked succesfully
-2022-07-01 16:16:17,509 INFO c.m.s.Layer_CartPFSteps [main] The Current Page is as expected
-2022-07-01 16:16:18,175 INFO c.m.s.Layer_CartPFSteps [main] The Product successfully added to your shopping cart was as expected
-2022-07-01 16:16:20,094 INFO c.m.s.Layer_CartPFSteps [main] The Name has expected value Blouse
-2022-07-01 16:16:20,729 INFO c.m.s.Layer_CartPFSteps [main] The CONTINUESHOPPING was clicked as expected
-2022-07-01 16:16:21,775 INFO c.m.s.MyStorePFSteps [main] The Printed Dress was  clicked succesfully.
-2022-07-01 16:16:24,037 INFO c.m.s.FancyBoxFramePFSteps [main] The Printed Dress QuickView was  displayed succesfully
-2022-07-01 16:16:24,846 INFO c.m.s.FancyBoxFramePFSteps [main] The value Printed Dress is same as value in  Name
-2022-07-01 16:16:25,646 INFO c.m.s.FancyBoxFramePFSteps [main] The value 1 entered in  Quantity
-2022-07-01 16:16:26,245 INFO c.m.s.FancyBoxFramePFSteps [main] The ADDTOCART was clicked succesfully
-2022-07-01 16:16:27,738 INFO c.m.s.Layer_CartPFSteps [main] The Current Page is as expected
-2022-07-01 16:16:28,395 INFO c.m.s.Layer_CartPFSteps [main] The Product successfully added to your shopping cart was as expected
-2022-07-01 16:16:31,017 INFO c.m.s.Layer_CartPFSteps [main] The PROCEEDTOCHECKOUT was clicked as expected
-2022-07-01 16:16:31,635 INFO c.m.s.Cart_SummaryPFSteps [main] The user is in Cart_Summary Page
-2022-07-01 16:16:34,203 ERROR c.m.s.Cart_SummaryPFSteps [main] The Details are not as expected in the cart details 
-2022-07-01 16:16:35,911 ERROR c.m.s.Cart_SummaryPFSteps [main] The PROCEEDTOCHECKOUT could not be clicked succesfully 
-2022-07-01 16:16:37,896 ERROR c.m.s.Login_MyStorePFSteps [main] The login could not be clicked
+2022-07-08 11:58:54,634 ERROR c.m.s.MyStorePFSteps [pool-1-thread-3] The Current Page is My Store and is not as expected.
+2022-07-08 11:59:00,888 INFO c.m.s.MyStorePFSteps [pool-1-thread-3] [Ljava.lang.StackTraceElement;@67651dbd
+2022-07-08 11:59:00,888 ERROR c.m.s.MyStorePFSteps [pool-1-thread-3] The Sign in could not be clicked 
+2022-07-08 11:59:04,177 ERROR c.m.s.Generic [pool-1-thread-3] The user is not naviaged to  LOGIN_MYSTOREPAGE
+2022-07-08 11:59:12,732 ERROR c.m.s.Login_MyStorePFSteps [pool-1-thread-3] The login could not be clicked
+2022-07-08 11:59:17,447 ERROR c.m.s.MyStorePFSteps [pool-1-thread-1] The Current Page is My Store and is not as expected.
+2022-07-08 11:59:35,546 ERROR c.m.s.MyStorePFSteps [pool-1-thread-2] The Current Page is My Store and is not as expected.
+2022-07-08 11:59:47,823 INFO c.m.s.MyStorePFSteps [pool-1-thread-1] [Ljava.lang.StackTraceElement;@14fd2c59
+2022-07-08 11:59:47,823 ERROR c.m.s.MyStorePFSteps [pool-1-thread-1] The Blouse could not be clicked 
+2022-07-08 12:02:36,023 INFO c.m.s.MyStorePFSteps [pool-1-thread-2] [Ljava.lang.StackTraceElement;@368894ca
+2022-07-08 12:02:36,023 ERROR c.m.s.MyStorePFSteps [pool-1-thread-2] The Sign in could not be clicked 
+2022-07-08 12:05:20,184 ERROR c.m.s.MyStorePFSteps [pool-1-thread-1] The Current Page is My Store and is not as expected.
+2022-07-08 12:05:36,423 ERROR c.m.s.Generic [pool-1-thread-2] The user is not naviaged to  LOGIN_MYSTOREPAGE
+2022-07-08 12:05:50,767 INFO c.m.s.MyStorePFSteps [pool-1-thread-1] [Ljava.lang.StackTraceElement;@49ebfc5b
+2022-07-08 12:05:50,767 ERROR c.m.s.MyStorePFSteps [pool-1-thread-1] The Blouse could not be clicked 
+2022-07-08 12:06:26,276 ERROR c.m.s.MyStorePFSteps [pool-1-thread-1] The Current Page is My Store and is not as expected.
+2022-07-08 12:06:26,846 INFO c.m.s.MyStorePFSteps [pool-1-thread-1] The Blouse was  clicked succesfully.
+2022-07-08 12:06:30,117 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The Blouse QuickView was  displayed succesfully
+2022-07-08 12:06:30,478 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value Blouse is same as value in  Name
+2022-07-08 12:06:30,980 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value 2 entered in  Quantity
+2022-07-08 12:06:31,356 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The ADDTOCART was clicked succesfully
+2022-07-08 12:06:41,110 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Current Page is as expected
+2022-07-08 12:06:41,457 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Product successfully added to your shopping cart was as expected
+2022-07-08 12:06:42,458 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Name has expected value Blouse
+2022-07-08 12:06:42,797 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The CONTINUESHOPPING was clicked as expected
+2022-07-08 12:06:43,290 INFO c.m.s.MyStorePFSteps [pool-1-thread-1] The Printed Dress was  clicked succesfully.
+2022-07-08 12:06:52,095 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The Printed Dress QuickView was  displayed succesfully
+2022-07-08 12:06:52,615 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value Printed Dress is same as value in  Name
+2022-07-08 12:06:53,071 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value 1 entered in  Quantity
+2022-07-08 12:06:53,434 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The ADDTOCART was clicked succesfully
+2022-07-08 12:06:59,448 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Current Page is as expected
+2022-07-08 12:06:59,789 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Product successfully added to your shopping cart was as expected
+2022-07-08 12:07:02,206 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The PROCEEDTOCHECKOUT was clicked as expected
+2022-07-08 12:07:02,525 INFO c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] The user is in Cart_Summary Page
+2022-07-08 12:07:03,008 INFO c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] [Ljava.lang.StackTraceElement;@1f0f964
+2022-07-08 12:07:03,009 ERROR c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] The Details are not as expected in the cart details 
+2022-07-08 12:07:05,629 ERROR c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] The PROCEEDTOCHECKOUT could not be clicked succesfully 
+2022-07-08 12:07:06,537 ERROR c.m.s.Login_MyStorePFSteps [pool-1-thread-2] The <ExcelData|UserEmail> could not be  entered  in EMAILADDRESS
+2022-07-08 12:07:08,999 ERROR c.m.s.Login_MyStorePFSteps [pool-1-thread-1] The login could not be clicked
+2022-07-08 12:08:36,648 ERROR c.m.s.Login_MyStorePFSteps [pool-1-thread-2] The CREATEEMAIL could not be  clicked
+2022-07-08 12:09:36,703 ERROR c.m.s.Generic [pool-1-thread-2] The user is not naviaged to  LOGIN_MYSTOREPAGEEXT
+2022-07-08 12:11:06,840 ERROR c.m.s.Login_MyStoreExtPFSteps [pool-1-thread-2] The MR could not be clicked.
+2022-07-08 12:12:36,931 ERROR c.m.s.Login_MyStoreExtPFSteps [pool-1-thread-2] The Mohan could not be entered in Address Last Name
+2022-07-08 12:18:39,035 ERROR c.m.s.MyStorePFSteps [pool-1-thread-2] The Current Page is My Store and is not as expected.
+2022-07-08 12:21:39,617 INFO c.m.s.MyStorePFSteps [pool-1-thread-2] [Ljava.lang.StackTraceElement;@7f957177
+2022-07-08 12:21:39,617 ERROR c.m.s.MyStorePFSteps [pool-1-thread-2] The Sign in could not be clicked 
+2022-07-08 12:24:40,022 ERROR c.m.s.Generic [pool-1-thread-2] The user is not naviaged to  LOGIN_MYSTOREPAGE
+2022-07-08 12:26:10,122 ERROR c.m.s.Login_MyStorePFSteps [pool-1-thread-2] The <MyTestset1@gmail.com> could not be  entered  in EMAILADDRESS
+2022-07-08 12:27:08,159 ERROR c.m.s.Login_MyStorePFSteps [pool-1-thread-2] The CREATEEMAIL could not be  clicked
+2022-07-08 12:27:08,173 ERROR c.m.s.Generic [pool-1-thread-2] The user is not naviaged to  LOGIN_MYSTOREPAGEEXT
+2022-07-08 12:29:43,239 ERROR c.m.s.MyStorePFSteps [pool-1-thread-3] The Current Page is My Store and is not as expected.
+2022-07-08 12:29:50,520 INFO c.m.s.MyStorePFSteps [pool-1-thread-3] The Sign in was  clicked succesfully.
+2022-07-08 12:29:50,879 ERROR c.m.s.Generic [pool-1-thread-3] The user is not naviaged to  LOGIN_MYSTOREPAGE
+2022-07-08 12:29:54,208 ERROR c.m.s.Login_MyStorePFSteps [pool-1-thread-3] The login could not be clicked
+2022-07-08 12:29:55,890 ERROR c.m.s.MyStorePFSteps [pool-1-thread-2] The Current Page is My Store and is not as expected.
+2022-07-08 12:29:57,047 ERROR c.m.s.MyStorePFSteps [pool-1-thread-1] The Current Page is My Store and is not as expected.
+2022-07-08 12:30:00,745 INFO c.m.s.MyStorePFSteps [pool-1-thread-2] The Sign in was  clicked succesfully.
+2022-07-08 12:30:01,073 ERROR c.m.s.Generic [pool-1-thread-2] The user is not naviaged to  LOGIN_MYSTOREPAGE
+2022-07-08 12:30:01,343 INFO c.m.s.Login_MyStorePFSteps [pool-1-thread-2] The <ExcelData|UserEmail> was entered succesfully in EMAILADDRESS
+2022-07-08 12:30:01,606 INFO c.m.s.Login_MyStorePFSteps [pool-1-thread-2] The CREATEEMAIL was clicked successfully
+2022-07-08 12:30:01,765 ERROR c.m.s.Generic [pool-1-thread-2] The user is not naviaged to  LOGIN_MYSTOREPAGEEXT
+2022-07-08 12:30:05,969 INFO c.m.s.Login_MyStoreExtPFSteps [pool-1-thread-2] The MR was clicked succesfully
+2022-07-08 12:30:07,915 ERROR c.m.s.Login_MyStoreExtPFSteps [pool-1-thread-2] The Password@123 could not be entered in Password
+2022-07-08 12:30:16,691 ERROR c.m.s.MyStorePFSteps [pool-1-thread-2] The Current Page is My Store and is not as expected.
+2022-07-08 12:30:23,836 INFO c.m.s.MyStorePFSteps [pool-1-thread-2] The Sign in was  clicked succesfully.
+2022-07-08 12:30:24,195 ERROR c.m.s.Generic [pool-1-thread-2] The user is not naviaged to  LOGIN_MYSTOREPAGE
+2022-07-08 12:30:24,480 INFO c.m.s.Login_MyStorePFSteps [pool-1-thread-2] The <MyTestset1@gmail.com> was entered succesfully in EMAILADDRESS
+2022-07-08 12:30:24,777 INFO c.m.s.Login_MyStorePFSteps [pool-1-thread-2] The CREATEEMAIL was clicked successfully
+2022-07-08 12:30:24,956 ERROR c.m.s.Generic [pool-1-thread-2] The user is not naviaged to  LOGIN_MYSTOREPAGEEXT
+2022-07-08 12:30:27,337 INFO c.m.s.MyStorePFSteps [pool-1-thread-1] [Ljava.lang.StackTraceElement;@135819da
+2022-07-08 12:30:27,337 ERROR c.m.s.MyStorePFSteps [pool-1-thread-1] The Blouse could not be clicked 
+2022-07-08 12:30:28,976 INFO c.m.s.Login_MyStoreExtPFSteps [pool-1-thread-2] The MR was clicked succesfully
+2022-07-08 12:30:30,923 ERROR c.m.s.Login_MyStoreExtPFSteps [pool-1-thread-2] The Password@123 could not be entered in Password
+2022-07-08 12:31:08,404 ERROR c.m.s.MyStorePFSteps [pool-1-thread-1] The Current Page is My Store and is not as expected.
+2022-07-08 12:31:08,886 INFO c.m.s.MyStorePFSteps [pool-1-thread-1] The Blouse was  clicked succesfully.
+2022-07-08 12:31:14,252 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The Blouse QuickView was  displayed succesfully
+2022-07-08 12:31:14,626 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value Blouse is same as value in  Name
+2022-07-08 12:31:15,095 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value 2 entered in  Quantity
+2022-07-08 12:31:15,474 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The ADDTOCART was clicked succesfully
+2022-07-08 12:31:19,367 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Current Page is as expected
+2022-07-08 12:31:19,705 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Product successfully added to your shopping cart was as expected
+2022-07-08 12:31:20,642 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Name has expected value Blouse
+2022-07-08 12:31:20,963 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The CONTINUESHOPPING was clicked as expected
+2022-07-08 12:31:21,437 INFO c.m.s.MyStorePFSteps [pool-1-thread-1] The Printed Dress was  clicked succesfully.
+2022-07-08 12:31:24,290 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The Printed Dress QuickView was  displayed succesfully
+2022-07-08 12:31:24,754 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value Printed Dress is same as value in  Name
+2022-07-08 12:31:25,164 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value 1 entered in  Quantity
+2022-07-08 12:31:25,482 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The ADDTOCART was clicked succesfully
+2022-07-08 12:31:28,307 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Current Page is as expected
+2022-07-08 12:31:28,607 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Product successfully added to your shopping cart was as expected
+2022-07-08 12:31:30,662 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The PROCEEDTOCHECKOUT was clicked as expected
+2022-07-08 12:31:30,972 INFO c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] The user is in Cart_Summary Page
+2022-07-08 12:31:31,416 INFO c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] [Ljava.lang.StackTraceElement;@780951e0
+2022-07-08 12:31:31,416 ERROR c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] The Details are not as expected in the cart details 
+2022-07-08 12:31:36,880 ERROR c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] The PROCEEDTOCHECKOUT could not be clicked succesfully 
+2022-07-08 12:31:40,775 ERROR c.m.s.MyStorePFSteps [pool-1-thread-1] The Current Page is My Store and is not as expected.
+2022-07-08 12:31:41,306 INFO c.m.s.MyStorePFSteps [pool-1-thread-1] The Blouse was  clicked succesfully.
+2022-07-08 12:31:42,490 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The Blouse QuickView was  displayed succesfully
+2022-07-08 12:31:42,956 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value Blouse is same as value in  Name
+2022-07-08 12:31:43,428 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value 2 entered in  Quantity
+2022-07-08 12:31:43,862 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The ADDTOCART was clicked succesfully
+2022-07-08 12:31:45,205 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Current Page is as expected
+2022-07-08 12:31:45,591 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Product successfully added to your shopping cart was as expected
+2022-07-08 12:31:46,599 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Name has expected value Blouse
+2022-07-08 12:31:46,925 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The CONTINUESHOPPING was clicked as expected
+2022-07-08 12:31:47,373 INFO c.m.s.MyStorePFSteps [pool-1-thread-1] The Printed Dress was  clicked succesfully.
+2022-07-08 12:31:50,435 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The Printed Dress QuickView was  displayed succesfully
+2022-07-08 12:31:50,909 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value Printed Dress is same as value in  Name
+2022-07-08 12:31:51,307 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value 1 entered in  Quantity
+2022-07-08 12:31:51,617 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The ADDTOCART was clicked succesfully
+2022-07-08 12:32:00,739 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Current Page is as expected
+2022-07-08 12:32:01,026 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Product successfully added to your shopping cart was as expected
+2022-07-08 12:32:11,643 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The PROCEEDTOCHECKOUT was clicked as expected
+2022-07-08 12:32:11,926 INFO c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] The user is in Cart_Summary Page
+2022-07-08 12:32:12,398 INFO c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] [Ljava.lang.StackTraceElement;@713c5ead
+2022-07-08 12:32:12,398 ERROR c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] The Details are not as expected in the cart details 
+2022-07-08 12:32:31,199 ERROR c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] The PROCEEDTOCHECKOUT could not be clicked succesfully 
+2022-07-08 12:32:51,187 ERROR c.m.s.Login_MyStorePFSteps [pool-1-thread-1] The login could not be clicked
+2022-07-08 12:51:36,926 ERROR c.m.s.MyStorePFSteps [pool-1-thread-3] The Current Page is My Store and is not as expected.
+2022-07-08 12:51:36,987 ERROR c.m.s.MyStorePFSteps [pool-1-thread-2] The Current Page is My Store and is not as expected.
+2022-07-08 12:51:40,458 INFO c.m.s.MyStorePFSteps [pool-1-thread-3] The Sign in was  clicked succesfully.
+2022-07-08 12:51:40,752 INFO c.m.s.MyStorePFSteps [pool-1-thread-2] The Sign in was  clicked succesfully.
+2022-07-08 12:51:40,915 ERROR c.m.s.Generic [pool-1-thread-3] The user is not naviaged to  LOGIN_MYSTOREPAGE
+2022-07-08 12:51:41,176 ERROR c.m.s.Generic [pool-1-thread-2] The user is not naviaged to  LOGIN_MYSTOREPAGE
+2022-07-08 12:51:41,537 INFO c.m.s.Login_MyStorePFSteps [pool-1-thread-2] The <ExcelData|UserEmail> was entered succesfully in EMAILADDRESS
+2022-07-08 12:51:41,865 INFO c.m.s.Login_MyStorePFSteps [pool-1-thread-2] The CREATEEMAIL was clicked successfully
+2022-07-08 12:51:42,040 ERROR c.m.s.Generic [pool-1-thread-2] The user is not naviaged to  LOGIN_MYSTOREPAGEEXT
+2022-07-08 12:51:43,062 ERROR c.m.s.Login_MyStorePFSteps [pool-1-thread-3] The login could not be clicked
+2022-07-08 12:51:43,095 ERROR c.m.s.MyStorePFSteps [pool-1-thread-1] The Current Page is My Store and is not as expected.
+2022-07-08 12:51:43,477 INFO c.m.s.Login_MyStoreExtPFSteps [pool-1-thread-2] The MR was clicked succesfully
+2022-07-08 12:51:44,837 INFO c.m.s.MyStorePFSteps [pool-1-thread-1] [Ljava.lang.StackTraceElement;@144e07db
+2022-07-08 12:51:44,837 ERROR c.m.s.MyStorePFSteps [pool-1-thread-1] The Blouse could not be clicked 
+2022-07-08 12:51:46,109 ERROR c.m.s.Login_MyStoreExtPFSteps [pool-1-thread-2] The Password@123 could not be entered in Password
+2022-07-08 12:51:50,858 ERROR c.m.s.MyStorePFSteps [pool-1-thread-2] The Current Page is My Store and is not as expected.
+2022-07-08 12:51:56,350 INFO c.m.s.MyStorePFSteps [pool-1-thread-2] The Sign in was  clicked succesfully.
+2022-07-08 12:51:56,672 ERROR c.m.s.Generic [pool-1-thread-2] The user is not naviaged to  LOGIN_MYSTOREPAGE
+2022-07-08 12:51:56,972 INFO c.m.s.Login_MyStorePFSteps [pool-1-thread-2] The <MyTestset1@gmail.com> was entered succesfully in EMAILADDRESS
+2022-07-08 12:51:57,213 INFO c.m.s.Login_MyStorePFSteps [pool-1-thread-2] The CREATEEMAIL was clicked successfully
+2022-07-08 12:51:57,357 ERROR c.m.s.Generic [pool-1-thread-2] The user is not naviaged to  LOGIN_MYSTOREPAGEEXT
+2022-07-08 12:51:59,847 INFO c.m.s.Login_MyStoreExtPFSteps [pool-1-thread-2] The MR was clicked succesfully
+2022-07-08 12:52:01,747 ERROR c.m.s.Login_MyStoreExtPFSteps [pool-1-thread-2] The Password@123 could not be entered in Password
+2022-07-08 12:52:21,216 ERROR c.m.s.MyStorePFSteps [pool-1-thread-1] The Current Page is My Store and is not as expected.
+2022-07-08 12:52:21,719 INFO c.m.s.MyStorePFSteps [pool-1-thread-1] The Blouse was  clicked succesfully.
+2022-07-08 12:52:26,033 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The Blouse QuickView was  displayed succesfully
+2022-07-08 12:52:26,411 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value Blouse is same as value in  Name
+2022-07-08 12:52:26,847 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value 2 entered in  Quantity
+2022-07-08 12:52:27,200 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The ADDTOCART was clicked succesfully
+2022-07-08 12:52:29,557 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Current Page is as expected
+2022-07-08 12:52:29,887 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Product successfully added to your shopping cart was as expected
+2022-07-08 12:52:30,884 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Name has expected value Blouse
+2022-07-08 12:52:31,216 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The CONTINUESHOPPING was clicked as expected
+2022-07-08 12:52:31,682 INFO c.m.s.MyStorePFSteps [pool-1-thread-1] The Printed Dress was  clicked succesfully.
+2022-07-08 12:52:33,619 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The Printed Dress QuickView was  displayed succesfully
+2022-07-08 12:52:34,145 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value Printed Dress is same as value in  Name
+2022-07-08 12:52:34,545 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value 1 entered in  Quantity
+2022-07-08 12:52:34,854 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The ADDTOCART was clicked succesfully
+2022-07-08 12:52:36,122 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Current Page is as expected
+2022-07-08 12:52:36,410 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Product successfully added to your shopping cart was as expected
+2022-07-08 12:52:38,765 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The PROCEEDTOCHECKOUT was clicked as expected
+2022-07-08 12:52:39,061 INFO c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] The user is in Cart_Summary Page
+2022-07-08 12:52:39,542 INFO c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] [Ljava.lang.StackTraceElement;@134d74c
+2022-07-08 12:52:39,542 ERROR c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] The Details are not as expected in the cart details 
+2022-07-08 12:52:42,107 ERROR c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] The PROCEEDTOCHECKOUT could not be clicked succesfully 
+2022-07-08 12:52:49,727 ERROR c.m.s.Login_MyStorePFSteps [pool-1-thread-1] The login could not be clicked
+2022-07-08 12:58:43,728 ERROR c.m.s.MyStorePFSteps [pool-1-thread-1] The Current Page is My Store and is not as expected.
+2022-07-08 12:58:43,757 ERROR c.m.s.MyStorePFSteps [pool-1-thread-2] The Current Page is My Store and is not as expected.
+2022-07-08 12:58:43,878 ERROR c.m.s.MyStorePFSteps [pool-1-thread-3] The Current Page is My Store and is not as expected.
+2022-07-08 12:58:44,436 INFO c.m.s.MyStorePFSteps [pool-1-thread-1] The Blouse was  clicked succesfully.
+2022-07-08 12:58:46,768 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The Blouse QuickView was  displayed succesfully
+2022-07-08 12:58:47,283 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value Blouse is same as value in  Name
+2022-07-08 12:58:47,696 INFO c.m.s.MyStorePFSteps [pool-1-thread-2] The Sign in was  clicked succesfully.
+2022-07-08 12:58:47,872 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value 2 entered in  Quantity
+2022-07-08 12:58:47,901 INFO c.m.s.MyStorePFSteps [pool-1-thread-3] The Sign in was  clicked succesfully.
+2022-07-08 12:58:48,120 ERROR c.m.s.Generic [pool-1-thread-2] The user is not naviaged to  LOGIN_MYSTOREPAGE
+2022-07-08 12:58:48,310 ERROR c.m.s.Generic [pool-1-thread-3] The user is not naviaged to  LOGIN_MYSTOREPAGE
+2022-07-08 12:58:48,315 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The ADDTOCART was clicked succesfully
+2022-07-08 12:58:48,441 INFO c.m.s.Login_MyStorePFSteps [pool-1-thread-2] The <ExcelData|UserEmail> was entered succesfully in EMAILADDRESS
+2022-07-08 12:58:48,757 INFO c.m.s.Login_MyStorePFSteps [pool-1-thread-2] The CREATEEMAIL was clicked successfully
+2022-07-08 12:58:48,926 ERROR c.m.s.Generic [pool-1-thread-2] The user is not naviaged to  LOGIN_MYSTOREPAGEEXT
+2022-07-08 12:58:51,199 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Current Page is as expected
+2022-07-08 12:58:51,516 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Product successfully added to your shopping cart was as expected
+2022-07-08 12:58:52,419 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Name has expected value Blouse
+2022-07-08 12:58:52,461 INFO c.m.s.Login_MyStoreExtPFSteps [pool-1-thread-2] The MR was clicked succesfully
+2022-07-08 12:58:54,281 ERROR c.m.s.Login_MyStoreExtPFSteps [pool-1-thread-2] The Password@123 could not be entered in Password
+2022-07-08 12:58:54,725 ERROR c.m.s.Login_MyStorePFSteps [pool-1-thread-3] The login could not be clicked
+2022-07-08 12:58:55,366 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The PROCEEDTOCHECKOUT was clicked as expected
+2022-07-08 12:58:55,752 INFO c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] The user is in Cart_Summary Page
+2022-07-08 12:58:58,752 ERROR c.m.s.MyStorePFSteps [pool-1-thread-2] The Current Page is My Store and is not as expected.
+2022-07-08 12:59:00,371 ERROR c.m.s.MyStorePFSteps [pool-1-thread-1] The Current Page is My Store and is not as expected.
+2022-07-08 12:59:00,928 INFO c.m.s.MyStorePFSteps [pool-1-thread-1] The Blouse was  clicked succesfully.
+2022-07-08 12:59:02,151 INFO c.m.s.MyStorePFSteps [pool-1-thread-2] The Sign in was  clicked succesfully.
+2022-07-08 12:59:02,530 ERROR c.m.s.Generic [pool-1-thread-2] The user is not naviaged to  LOGIN_MYSTOREPAGE
+2022-07-08 12:59:02,843 INFO c.m.s.Login_MyStorePFSteps [pool-1-thread-2] The <MyTestset1@gmail.com> was entered succesfully in EMAILADDRESS
+2022-07-08 12:59:03,172 INFO c.m.s.Login_MyStorePFSteps [pool-1-thread-2] The CREATEEMAIL was clicked successfully
+2022-07-08 12:59:03,387 ERROR c.m.s.Generic [pool-1-thread-2] The user is not naviaged to  LOGIN_MYSTOREPAGEEXT
+2022-07-08 12:59:05,876 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The Blouse QuickView was  displayed succesfully
+2022-07-08 12:59:06,373 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value Blouse is same as value in  Name
+2022-07-08 12:59:06,848 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value 2 entered in  Quantity
+2022-07-08 12:59:07,050 INFO c.m.s.Login_MyStoreExtPFSteps [pool-1-thread-2] The MR was clicked succesfully
+2022-07-08 12:59:07,222 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The ADDTOCART was clicked succesfully
+2022-07-08 12:59:08,558 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Current Page is as expected
+2022-07-08 12:59:08,892 ERROR c.m.s.Login_MyStoreExtPFSteps [pool-1-thread-2] The Password@123 could not be entered in Password
+2022-07-08 12:59:08,903 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Product successfully added to your shopping cart was as expected
+2022-07-08 12:59:10,024 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Name has expected value Blouse
+2022-07-08 12:59:10,360 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The CONTINUESHOPPING was clicked as expected
+2022-07-08 12:59:10,873 INFO c.m.s.MyStorePFSteps [pool-1-thread-1] The Printed Dress was  clicked succesfully.
+2022-07-08 12:59:12,034 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The Printed Dress QuickView was  displayed succesfully
+2022-07-08 12:59:12,538 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value Printed Dress is same as value in  Name
+2022-07-08 12:59:12,993 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value 1 entered in  Quantity
+2022-07-08 12:59:13,330 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The ADDTOCART was clicked succesfully
+2022-07-08 12:59:15,134 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Current Page is as expected
+2022-07-08 12:59:15,429 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Product successfully added to your shopping cart was as expected
+2022-07-08 12:59:17,171 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The PROCEEDTOCHECKOUT was clicked as expected
+2022-07-08 12:59:17,442 INFO c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] The user is in Cart_Summary Page
+2022-07-08 12:59:17,923 INFO c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] [Ljava.lang.StackTraceElement;@52bf1275
+2022-07-08 12:59:17,923 ERROR c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] The Details are not as expected in the cart details 
+2022-07-08 12:59:19,423 ERROR c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] The PROCEEDTOCHECKOUT could not be clicked succesfully 
+2022-07-08 12:59:23,695 ERROR c.m.s.MyStorePFSteps [pool-1-thread-1] The Current Page is My Store and is not as expected.
+2022-07-08 12:59:24,252 INFO c.m.s.MyStorePFSteps [pool-1-thread-1] The Blouse was  clicked succesfully.
+2022-07-08 12:59:25,466 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The Blouse QuickView was  displayed succesfully
+2022-07-08 12:59:25,891 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value Blouse is same as value in  Name
+2022-07-08 12:59:26,342 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value 2 entered in  Quantity
+2022-07-08 12:59:26,728 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The ADDTOCART was clicked succesfully
+2022-07-08 12:59:27,516 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Current Page is as expected
+2022-07-08 12:59:27,836 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Product successfully added to your shopping cart was as expected
+2022-07-08 12:59:28,793 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Name has expected value Blouse
+2022-07-08 12:59:29,112 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The CONTINUESHOPPING was clicked as expected
+2022-07-08 12:59:29,597 INFO c.m.s.MyStorePFSteps [pool-1-thread-1] The Printed Dress was  clicked succesfully.
+2022-07-08 12:59:30,437 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The Printed Dress QuickView was  displayed succesfully
+2022-07-08 12:59:30,910 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value Printed Dress is same as value in  Name
+2022-07-08 12:59:31,316 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value 1 entered in  Quantity
+2022-07-08 12:59:31,626 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The ADDTOCART was clicked succesfully
+2022-07-08 12:59:32,369 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Current Page is as expected
+2022-07-08 12:59:32,676 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Product successfully added to your shopping cart was as expected
+2022-07-08 12:59:34,704 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The PROCEEDTOCHECKOUT was clicked as expected
+2022-07-08 12:59:34,991 INFO c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] The user is in Cart_Summary Page
+2022-07-08 12:59:35,435 INFO c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] [Ljava.lang.StackTraceElement;@c19dd68
+2022-07-08 12:59:35,435 ERROR c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] The Details are not as expected in the cart details 
+2022-07-08 12:59:37,398 ERROR c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] The PROCEEDTOCHECKOUT could not be clicked succesfully 
+2022-07-08 12:59:39,021 ERROR c.m.s.Login_MyStorePFSteps [pool-1-thread-1] The login could not be clicked
+2022-07-08 13:19:25,049 ERROR c.m.s.MyStorePFSteps [pool-1-thread-1] The Current Page is My Store and is not as expected.
+2022-07-08 13:19:25,048 ERROR c.m.s.MyStorePFSteps [pool-1-thread-2] The Current Page is My Store and is not as expected.
+2022-07-08 13:19:25,620 INFO c.m.s.MyStorePFSteps [pool-1-thread-1] The Blouse was  clicked succesfully.
+2022-07-08 13:19:27,990 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The Blouse QuickView was  displayed succesfully
+2022-07-08 13:19:28,148 INFO c.m.s.MyStorePFSteps [pool-1-thread-2] The Sign in was  clicked succesfully.
+2022-07-08 13:19:28,484 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value Blouse is same as value in  Name
+2022-07-08 13:19:28,506 ERROR c.m.s.Generic [pool-1-thread-2] The user is not naviaged to  LOGIN_MYSTOREPAGE
+2022-07-08 13:19:29,045 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value 2 entered in  Quantity
+2022-07-08 13:19:29,438 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The ADDTOCART was clicked succesfully
+2022-07-08 13:19:31,306 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Current Page is as expected
+2022-07-08 13:19:31,501 ERROR c.m.s.Login_MyStorePFSteps [pool-1-thread-2] The login could not be clicked
+2022-07-08 13:19:31,639 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Product successfully added to your shopping cart was as expected
+2022-07-08 13:19:32,778 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Name has expected value Blouse
+2022-07-08 13:19:34,431 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The PROCEEDTOCHECKOUT was clicked as expected
+2022-07-08 13:19:34,749 INFO c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] The user is in Cart_Summary Page
+2022-07-08 13:19:39,590 ERROR c.m.s.MyStorePFSteps [pool-1-thread-1] The Current Page is My Store and is not as expected.
+2022-07-08 13:19:40,168 INFO c.m.s.MyStorePFSteps [pool-1-thread-1] The Blouse was  clicked succesfully.
+2022-07-08 13:19:41,437 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The Blouse QuickView was  displayed succesfully
+2022-07-08 13:19:41,845 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value Blouse is same as value in  Name
+2022-07-08 13:19:42,319 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value 2 entered in  Quantity
+2022-07-08 13:19:42,684 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The ADDTOCART was clicked succesfully
+2022-07-08 13:19:44,016 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Current Page is as expected
+2022-07-08 13:19:44,357 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Product successfully added to your shopping cart was as expected
+2022-07-08 13:19:45,314 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Name has expected value Blouse
+2022-07-08 13:19:45,625 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The CONTINUESHOPPING was clicked as expected
+2022-07-08 13:19:46,129 INFO c.m.s.MyStorePFSteps [pool-1-thread-1] The Printed Dress was  clicked succesfully.
+2022-07-08 13:19:48,496 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The Printed Dress QuickView was  displayed succesfully
+2022-07-08 13:19:48,979 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value Printed Dress is same as value in  Name
+2022-07-08 13:19:49,407 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value 1 entered in  Quantity
+2022-07-08 13:19:49,748 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The ADDTOCART was clicked succesfully
+2022-07-08 13:19:51,007 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Current Page is as expected
+2022-07-08 13:19:51,307 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Product successfully added to your shopping cart was as expected
+2022-07-08 13:19:54,390 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The PROCEEDTOCHECKOUT was clicked as expected
+2022-07-08 13:19:54,659 INFO c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] The user is in Cart_Summary Page
+2022-07-08 13:19:55,125 INFO c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] [Ljava.lang.StackTraceElement;@f40972a
+2022-07-08 13:19:55,125 ERROR c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] The Details are not as expected in the cart details 
+2022-07-08 13:19:56,595 ERROR c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] The PROCEEDTOCHECKOUT could not be clicked succesfully 
+2022-07-08 13:20:01,222 ERROR c.m.s.MyStorePFSteps [pool-1-thread-1] The Current Page is My Store and is not as expected.
+2022-07-08 13:20:01,744 INFO c.m.s.MyStorePFSteps [pool-1-thread-1] The Blouse was  clicked succesfully.
+2022-07-08 13:20:03,966 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The Blouse QuickView was  displayed succesfully
+2022-07-08 13:20:04,350 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value Blouse is same as value in  Name
+2022-07-08 13:20:04,833 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value 2 entered in  Quantity
+2022-07-08 13:20:05,211 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The ADDTOCART was clicked succesfully
+2022-07-08 13:20:06,064 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Current Page is as expected
+2022-07-08 13:20:06,389 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Product successfully added to your shopping cart was as expected
+2022-07-08 13:20:07,347 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Name has expected value Blouse
+2022-07-08 13:20:07,663 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The CONTINUESHOPPING was clicked as expected
+2022-07-08 13:20:08,156 INFO c.m.s.MyStorePFSteps [pool-1-thread-1] The Printed Dress was  clicked succesfully.
+2022-07-08 13:20:09,099 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The Printed Dress QuickView was  displayed succesfully
+2022-07-08 13:20:09,554 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value Printed Dress is same as value in  Name
+2022-07-08 13:20:09,980 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The value 1 entered in  Quantity
+2022-07-08 13:20:10,300 INFO c.m.s.FancyBoxFramePFSteps [pool-1-thread-1] The ADDTOCART was clicked succesfully
+2022-07-08 13:20:11,037 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Current Page is as expected
+2022-07-08 13:20:11,350 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The Product successfully added to your shopping cart was as expected
+2022-07-08 13:20:13,083 INFO c.m.s.Layer_CartPFSteps [pool-1-thread-1] The PROCEEDTOCHECKOUT was clicked as expected
+2022-07-08 13:20:13,343 INFO c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] The user is in Cart_Summary Page
+2022-07-08 13:20:13,785 INFO c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] [Ljava.lang.StackTraceElement;@70db2ec4
+2022-07-08 13:20:13,785 ERROR c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] The Details are not as expected in the cart details 
+2022-07-08 13:20:15,376 ERROR c.m.s.Cart_SummaryPFSteps [pool-1-thread-1] The PROCEEDTOCHECKOUT could not be clicked succesfully 
+2022-07-08 13:20:17,277 ERROR c.m.s.Login_MyStorePFSteps [pool-1-thread-1] The login could not be clicked

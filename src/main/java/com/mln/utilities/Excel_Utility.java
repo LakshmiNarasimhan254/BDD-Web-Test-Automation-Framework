@@ -18,7 +18,7 @@ public class Excel_Utility {
 			wb= new XSSFWorkbook(System.getProperty("user.dir")+ "/src/test/resources/excel/" + strTestName + ".xlsx");
 			ws = wb.getSheet("Testdata");
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 	}

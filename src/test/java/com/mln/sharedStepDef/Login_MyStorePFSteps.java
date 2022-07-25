@@ -76,7 +76,7 @@ public class Login_MyStorePFSteps {
 			logger.info(e2.getStackTrace());
 
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}finally{
 			if (bResult==true){
@@ -124,7 +124,7 @@ public class Login_MyStorePFSteps {
 			logger.info(e2.getStackTrace());
 
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}finally{
 			if (bResult==true){
@@ -170,7 +170,7 @@ public class Login_MyStorePFSteps {
 			logger.info(e2.getStackTrace());
 
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}finally{
 			if (bResult==true){

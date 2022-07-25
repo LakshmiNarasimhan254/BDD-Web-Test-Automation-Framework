@@ -23,6 +23,7 @@
 				<version>2.22.0</version>
 				<configuration>
 					<parallel>methods</parallel>
+					<threadCount>4</threadCount>
 					<useUnlimitedThreads>true</useUnlimitedThreads>
 				</configuration>
 			</plugin>
@@ -85,6 +86,11 @@
 			<artifactId>cucumber-junit</artifactId>
 			<version>7.3.4</version>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>tech.grasshopper</groupId>
+			<artifactId>extentreports-cucumber6-adapter</artifactId>
+			<version>2.13.0</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
