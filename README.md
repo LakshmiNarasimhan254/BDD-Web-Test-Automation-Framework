@@ -1,7 +1,5 @@
 
-## API Test Automation Framework   
-ATAF is the acronym for API Test Automation Framework# BDD Web Test Automation Framework   
-
+# BDD Web Test Automation Framework   
 
 ## Description
 This is a BDD Style test automation framework for web application using Selenium,Java and cucumber.
@@ -20,6 +18,7 @@ Please read the document for its features, capability and usage
     1. Configuration can be changed from config. properties inside src/test/resources
     2. Step wise execution and screenshot are stored separately for every run apart from the 
        reports generated through extent reports and html reports 
+    3. Log4j logs are also captured for every step
           
    
 ## Adding more tests:
@@ -40,7 +39,7 @@ Please read the document for its features, capability and usage
     2. run the mvn clean test - To run all the tests available runner file
 
 ## Final Notes:
-   1.I have used AutomationPractice.com as the web application under test 
+I have used AutomationPractice.com as the web application under test 
 
 ### Questions:
 For any further clarification - please reach out to Lakshminarasimhan254@gmail.com
