@@ -7,9 +7,8 @@ import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.NoSuchElementException;
-import java.util.concurrent.TimeUnit;
 
+import com.mln.reports.ExcelReports;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -22,11 +21,11 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.mln.managers.FileReaderManager;
-import com.mln.reports.Excel_Reports;
 
 
 
-public class Common_Utility {
+
+public class CommonUtility {
 
 	private WebElement element = null; 
 	private String strResult;
@@ -39,9 +38,9 @@ public class Common_Utility {
 	Date sDate = new Date();
 	String dDate = dfDate.format(sDate);
 	WebDriver adriver;
-	Excel_Reports xlrpt;
+	ExcelReports xlrpt;
 
-	public Common_Utility(WebDriver driver) {
+	public CommonUtility(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		adriver = driver;
 	}
@@ -416,8 +415,8 @@ public class Common_Utility {
 
 
 	public void setsTestName(String sTestName) {
-		Common_Utility.sTestName = sTestName;
-		testReportStructure(Common_Utility.sTestName);
+		CommonUtility.sTestName = sTestName;
+		testReportStructure(CommonUtility.sTestName);
 	}
 
 	public void testReportStructure(String sTest){
@@ -435,7 +434,7 @@ public class Common_Utility {
 			}
 			sFinalPath = sAbsPath + "screenshots\\" + dDate  + "\\" + sTest+  "\\Run" + iRun + "\\snap" ;
 			System.out.println(sFinalPath);
-			xlrpt = new Excel_Reports(sTest);
+			xlrpt = new ExcelReports(sTest);
 		} catch (Exception e) {
 			
 			e.printStackTrace();

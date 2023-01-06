@@ -9,11 +9,11 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class Excel_Utility {
+public class ExcelUtility {
 	XSSFWorkbook wb;
 	XSSFSheet ws;
 
-	public Excel_Utility(String strTestName) {
+	public ExcelUtility(String strTestName) {
 		try {
 			wb= new XSSFWorkbook(System.getProperty("user.dir")+ "/src/test/resources/excel/" + strTestName + ".xlsx");
 			ws = wb.getSheet("Testdata");

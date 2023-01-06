@@ -2,17 +2,13 @@ package com.mln.pageFactory;
 
 
 import java.io.IOException;
-import java.time.Duration;
-import java.util.Iterator;
-import java.util.List;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.mln.utilities.Common_Utility;
+import com.mln.utilities.CommonUtility;
 
 public class Layer_CartPF {
 
@@ -68,7 +64,7 @@ public class Layer_CartPF {
 	
 
 
-	public boolean VerifyElementTxt(Common_Utility wmobj,String strElement, String Value) throws Exception{
+	public boolean VerifyElementTxt(CommonUtility wmobj, String strElement, String Value) throws Exception{
 		boolean bResult = false;
 	
 		try {
@@ -104,19 +100,19 @@ public class Layer_CartPF {
 
 	
 	
-	public boolean VerifySuccess(Common_Utility wmobj, String Value) throws Exception{
+	public boolean VerifySuccess(CommonUtility wmobj, String Value) throws Exception{
 	  boolean bResult = false;
 	 return bResult=wmobj.verifyText(txtSuccessCart, Value);
 	}
 
-	public void clickProceedtoCheckout(Common_Utility wmobj) throws Exception
+	public void clickProceedtoCheckout(CommonUtility wmobj) throws Exception
 
 	{
 		wmobj.clickLnkBtn(btnProceedtoCheckout);
 
 	}
 
-	public void clickContShopping(Common_Utility wmobj) throws Exception
+	public void clickContShopping(CommonUtility wmobj) throws Exception
 
 	{
 		wmobj.clickLnkBtn(btnContShopping);

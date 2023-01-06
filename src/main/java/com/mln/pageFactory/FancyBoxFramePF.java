@@ -14,7 +14,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.mln.utilities.Common_Utility;
+import com.mln.utilities.CommonUtility;
 
 public class FancyBoxFramePF {
 
@@ -67,31 +67,31 @@ public class FancyBoxFramePF {
 	}
 
 
-	public void clickAddtoCart(Common_Utility wmobj) throws Exception
+	public void clickAddtoCart(CommonUtility wmobj) throws Exception
 
 	{
 		wmobj.clickLnkBtn(btnAddtoCart);
 
 	}
 
-	public void enterQuantity(Common_Utility wmobj,String strQuanity) throws Exception
+	public void enterQuantity(CommonUtility wmobj, String strQuanity) throws Exception
 
 	{
 		wmobj.setValue(txtbxQuantity, strQuanity);
 	}
 
-	public void selectSize(Common_Utility wmobj,String strSize) throws Exception
+	public void selectSize(CommonUtility wmobj, String strSize) throws Exception
 
 	{
 		wmobj.selectValuebyText(drpdnSize, strSize);
 	}
 
-	public void selectSize(Common_Utility wmobj,int iColor) throws Exception
+	public void selectSize(CommonUtility wmobj, int iColor) throws Exception
 
 	{
 		wmobj.clickLnkBtn(colorOptions.get(iColor));
 	}
-	public void selectColor(Common_Utility wmobj,String iColor) throws Exception 
+	public void selectColor(CommonUtility wmobj, String iColor) throws Exception
 
 	{
 		Iterator<WebElement> iter = colorOptions.iterator();
@@ -103,7 +103,7 @@ public class FancyBoxFramePF {
 
 	}
 
-	public boolean VerifyElementTxt(Common_Utility wmobj,String strElement, String Value) throws Exception{
+	public boolean VerifyElementTxt(CommonUtility wmobj, String strElement, String Value) throws Exception{
 	boolean bResult = false;
 	{
 		strElement =(strElement.replace(" ","").trim()).toUpperCase();
@@ -142,7 +142,7 @@ public class FancyBoxFramePF {
 }
 
 
-public void EnterTxt(Common_Utility wmobj, String strElement, String Value) throws Exception{
+public void EnterTxt(CommonUtility wmobj, String strElement, String Value) throws Exception{
 	strElement =(strElement.replace(" ","").trim()).toUpperCase();
 
 	switch(strElement){

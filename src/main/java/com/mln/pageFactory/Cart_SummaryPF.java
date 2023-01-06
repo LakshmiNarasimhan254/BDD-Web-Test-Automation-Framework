@@ -12,7 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.mln.utilities.Common_Utility;
+import com.mln.utilities.CommonUtility;
 
 public class Cart_SummaryPF {
 	WebDriver driver;
@@ -113,7 +113,7 @@ public class Cart_SummaryPF {
 	}
 
 
-	public boolean verifyCartDetails(Common_Utility wmobj,String StrValue) throws Exception{
+	public boolean verifyCartDetails(CommonUtility wmobj, String StrValue) throws Exception{
 		boolean bResult = false;
 		String[] StrValues=null;
 
@@ -161,14 +161,14 @@ public class Cart_SummaryPF {
 
 	}
 
-	public void clickProceedtoCheckout(Common_Utility wmobj) throws Exception
+	public void clickProceedtoCheckout(CommonUtility wmobj) throws Exception
 
 	{
 		wmobj.clickLnkBtn(btnProceedtoCheckout);
 
 	}
 
-	public void clickContShopping(Common_Utility wmobj) throws Exception
+	public void clickContShopping(CommonUtility wmobj) throws Exception
 
 	{
 		wmobj.clickLnkBtn(btnContShopping);

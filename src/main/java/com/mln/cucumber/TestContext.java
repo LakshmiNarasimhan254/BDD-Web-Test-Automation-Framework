@@ -1,18 +1,20 @@
 package com.mln.cucumber;
 
+import java.net.MalformedURLException;
+
 import com.mln.managers.DriverManager;
 import com.mln.managers.PageFactoryManager;
-import com.mln.utilities.Common_Utility;
+import com.mln.utilities.CommonUtility;
 
 public class TestContext {
 	private DriverManager driverManager;
 	private PageFactoryManager pageFactoryManager;
-	private Common_Utility common_Utility;
+	private CommonUtility common_Utility;
 	
-	public TestContext(){
+	public TestContext() throws MalformedURLException{
 		driverManager = new DriverManager();
 		pageFactoryManager = new PageFactoryManager(driverManager.getDriver());
-		common_Utility = new Common_Utility(driverManager.getDriver());
+		common_Utility = new CommonUtility(driverManager.getDriver());
 		
 	}
 	
@@ -25,11 +27,11 @@ public class TestContext {
 		return pageFactoryManager;
 	}
 	
-	public Common_Utility getCommon_Utility(String sTest) {
+	public CommonUtility getCommon_Utility(String sTest) {
 		return common_Utility;
 	}
 
-	public Common_Utility getCommon_Utility() {
+	public CommonUtility getCommon_Utility() {
 		// TODO Auto-generated method stub
 		return common_Utility;
 	}

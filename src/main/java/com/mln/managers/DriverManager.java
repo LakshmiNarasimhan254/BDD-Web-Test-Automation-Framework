@@ -1,5 +1,7 @@
 package com.mln.managers;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -7,6 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.mln.dataProviders.*;
 import com.mln.enums.BrowserType;
@@ -26,12 +30,12 @@ public class DriverManager {
 		environmentType = FileReaderManager.getInstance().getConfigReader().getEnvironment();
 	}
 
-	public WebDriver getDriver() {
+	public WebDriver getDriver() throws MalformedURLException {
 		if(driver == null) driver = createDriver();
 		return driver;
 	}
 
-	private WebDriver createDriver() {
+	private WebDriver createDriver() throws MalformedURLException {
 		   switch (environmentType) {	    
 	        case LOCAL : driver = createLocalDriver();
 	        	break;
@@ -41,9 +45,37 @@ public class DriverManager {
 		   return driver;
 	}
 
-	private WebDriver createRemoteDriver() {
-		throw new RuntimeException("RemoteWebDriver is not yet implemented");
-	}
+	private WebDriver createRemoteDriver() throws MalformedURLException {
+		DesiredCapabilities dc = new DesiredCapabilities();
+		
+	     switch (browserType) {	    
+	        case FIREFOX : 
+	        	dc.setBrowserName("firefox");
+	        	break;
+	        case CHROME : 
+	        	dc.setBrowserName("chrome");
+	    		break;
+	        case INTERNETEXPLORER : 
+	        	dc.setBrowserName("ie");
+	    		break;
+	    		
+	        case EDGE : 
+	        	dc.setBrowserName("edge");
+	    		break;
+	        }
+	     
+	     
+	       driver = new RemoteWebDriver(new URL("http://127.0.0.1:53835"),dc);
+
+			if(FileReaderManager.getInstance().getConfigReader().getBrowserWindowSize()) {
+				driver.manage().window().maximize();
+				driver.manage().timeouts().implicitlyWait(FileReaderManager.getInstance().getConfigReader().getImplicitlyWait(), TimeUnit.SECONDS);
+			}
+			return driver;
+		}
+		
+		//throw new RuntimeException("RemoteWebDriver is not yet implemented");
+	
 
 	private WebDriver createLocalDriver() {
         switch (browserType) {	    

@@ -13,7 +13,7 @@ import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 
 
-public class Cookie_Utility {
+public class CookieUtility {
 
 	
 	public static void getmycookies(WebDriver driver){

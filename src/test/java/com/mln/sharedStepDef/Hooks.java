@@ -2,13 +2,15 @@ package com.mln.sharedStepDef;
 
 
 
+import java.net.MalformedURLException;
+
 import org.openqa.selenium.WebDriver;
 
 import com.mln.cucumber.TestContext;
 import com.mln.managers.DriverManager;
 import com.mln.managers.FileReaderManager;
-import com.mln.utilities.Excel_Utility;
-import com.mln.utilities.Common_Utility;
+import com.mln.utilities.ExcelUtility;
+import com.mln.utilities.CommonUtility;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -20,9 +22,9 @@ public class Hooks {
 	DriverManager driverManager;
 	TestContext testContext;
 	String strTestName = "TC-1";
-	Common_Utility wm;
+	CommonUtility wm;
 	String strUrl = FileReaderManager.getInstance().getConfigReader().getApplicationUrl();
-	Excel_Utility em = new Excel_Utility(strTestName);
+	ExcelUtility em = new ExcelUtility(strTestName);
 	
 	public Hooks(TestContext context) {
 		testContext = context;
@@ -33,7 +35,7 @@ public class Hooks {
 
 	
 	@Before
-	public void BeforeSteps(Scenario scenario) {
+	public void BeforeSteps(Scenario scenario) throws MalformedURLException {
 		strTestName= scenario.getName();
 		driver = testContext.getDriverManager().getDriver();
 		wm = testContext.getCommon_Utility();

@@ -11,13 +11,12 @@ import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.CreationHelper;
 import org.apache.poi.ss.usermodel.Font;
-import org.apache.poi.ss.usermodel.Hyperlink;
 import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class Excel_Reports{
+public class ExcelReports {
 	
 public static XSSFWorkbook wb = null;
 public static XSSFSheet sheet = null;
@@ -30,7 +29,7 @@ String dDate = dfDate.format(sDate);
 String sTestRptPath;
 
 //Defining the constructor- This take 
-	public Excel_Reports(String testCaseSheetName) throws InvalidFormatException, IOException{
+	public ExcelReports(String testCaseSheetName) throws InvalidFormatException, IOException{
 
 		tcSheetName=testCaseSheetName;
 		sTestRptPath = System.getProperty("user.dir")+"/Report/"+ dDate + "/" + tcSheetName + "/" ;

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.mln.utilities.Common_Utility;
+import com.mln.utilities.CommonUtility;
 
 public class Login_MyStoreExtPF {
 
@@ -109,7 +109,7 @@ public class Login_MyStoreExtPF {
 		}
 	}
 
-	public void EnterTxt(Common_Utility wmobj, String strElement, String Value) throws Exception{
+	public void EnterTxt(CommonUtility wmobj, String strElement, String Value) throws Exception{
 		strElement =(strElement.replace(" ","").trim()).toUpperCase();
 		
 		switch(strElement){
@@ -174,7 +174,7 @@ public class Login_MyStoreExtPF {
 			throw new IllegalStateException("This is not a correct value: " + strElement);
 		}
 	}
-	public void SelectDOB(Common_Utility wmobj, String Value) throws Exception{
+	public void SelectDOB(CommonUtility wmobj, String Value) throws Exception{
 		Value = Value.replace(" ","").trim();
 		String[] Date = Value.split("-");
 		String strDay = Date[0];
@@ -192,17 +192,17 @@ public class Login_MyStoreExtPF {
 	}
 
 
-	public void SelectState(Common_Utility wmobj, String Value) throws Exception{
+	public void SelectState(CommonUtility wmobj, String Value) throws Exception{
 		Value = Value.trim();		
 		wmobj.selectValuebyText(drpdnAddState, Value);	
 	}
 
-	public void SelectCountry(Common_Utility wmobj, String Value) throws Exception{
+	public void SelectCountry(CommonUtility wmobj, String Value) throws Exception{
 		Value = Value.trim();		
 		wmobj.selectValuebyText(drpdnAddCountry, Value);	
 	}
 
-	public void SelectTitle(Common_Utility wmobj, String Value) throws Exception{
+	public void SelectTitle(CommonUtility wmobj, String Value) throws Exception{
 		Value = (Value.trim()).toUpperCase();
 		if(Value == "MR"){
 			wmobj.selectRadioButton(rdbtnMr);
@@ -214,14 +214,14 @@ public class Login_MyStoreExtPF {
 			throw new IllegalStateException("This is not a correct value: " + Value);
 		}
 	}
-	public void ClickRegister(Common_Utility wmobj) throws Exception{
+	public void ClickRegister(CommonUtility wmobj) throws Exception{
 		wmobj.clickLnkBtn(btnRegister);
 	}
 
 
 
 
-	public boolean VerifyLogin_MyStoreExt(Common_Utility wmobj) throws Exception
+	public boolean VerifyLogin_MyStoreExt(CommonUtility wmobj) throws Exception
 		
 	{	boolean bResult =false;
 		return bResult= wmobj.isElementPresent(btnRegister);

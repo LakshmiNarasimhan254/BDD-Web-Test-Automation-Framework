@@ -9,8 +9,8 @@ import com.mln.cucumber.TestContext;
 import com.mln.managers.DriverManager;
 import com.mln.managers.FileReaderManager;
 import com.mln.pageFactory.MyStorePF;
-import com.mln.utilities.Excel_Utility;
-import com.mln.utilities.Common_Utility;
+import com.mln.utilities.ExcelUtility;
+import com.mln.utilities.CommonUtility;
 
 
 import io.cucumber.java.en.*;
@@ -23,9 +23,9 @@ public class MyStorePFSteps {
 	MyStorePF mystorePF;
 	TestContext testContext;
 	String strTestName = "TC-1";
-	Common_Utility wm;
+	CommonUtility wm;
 	String strUrl = FileReaderManager.getInstance().getConfigReader().getApplicationUrl();
-	Excel_Utility em = new Excel_Utility(strTestName);
+	ExcelUtility em = new ExcelUtility(strTestName);
 
 
 

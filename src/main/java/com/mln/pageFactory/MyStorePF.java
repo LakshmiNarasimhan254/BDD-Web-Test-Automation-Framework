@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.mln.utilities.Common_Utility;
+import com.mln.utilities.CommonUtility;
 
 public class MyStorePF {
 	
@@ -36,13 +36,13 @@ public class MyStorePF {
 	}
 
 	
-	public void ClickSignin(Common_Utility wmobj) throws Exception
+	public void ClickSignin(CommonUtility wmobj) throws Exception
 	{
 		
 		wmobj.clickLnkBtn(btnSignin);
 	}
 	
-	public void ClicktoViewPopular(Common_Utility wmobj,String strProductName) throws Exception
+	public void ClicktoViewPopular(CommonUtility wmobj, String strProductName) throws Exception
 		
 	{
 		String strXpath = "//ul[@id='homefeatured']//div/a[@title = '" + strProductName+ "']";

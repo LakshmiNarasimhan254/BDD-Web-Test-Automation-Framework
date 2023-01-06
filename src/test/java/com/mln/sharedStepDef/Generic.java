@@ -1,5 +1,7 @@
 package com.mln.sharedStepDef;
 
+import java.net.MalformedURLException;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.NoSuchFrameException;
@@ -9,12 +11,10 @@ import org.openqa.selenium.WebDriver;
 import com.mln.cucumber.TestContext;
 import com.mln.managers.DriverManager;
 import com.mln.managers.FileReaderManager;
-import com.mln.managers.PageFactoryManager;
 import com.mln.pageFactory.Login_MyStoreExtPF;
 import com.mln.pageFactory.Login_MyStorePF;
-import com.mln.pageFactory.MyStorePF;
-import com.mln.utilities.Excel_Utility;
-import com.mln.utilities.Common_Utility;
+import com.mln.utilities.ExcelUtility;
+import com.mln.utilities.CommonUtility;
 
 import io.cucumber.java.en.Then;
 
@@ -28,12 +28,12 @@ public class Generic {
 		TestContext testContext;
 		Login_MyStorePF login_mystorePF;
 		String strTestName = "TC-1";
-		Common_Utility wm;
+		CommonUtility wm;
 		String strUrl = FileReaderManager.getInstance().getConfigReader().getApplicationUrl();
-		Excel_Utility em = new Excel_Utility(strTestName);
+		ExcelUtility em = new ExcelUtility(strTestName);
 	
 		
-		public Generic(TestContext context) {
+		public Generic(TestContext context) throws MalformedURLException {
 			testContext = context;
 			driver = testContext.getDriverManager().getDriver();
 			login_mystoreExtPF = testContext.getPageFactoryManager().getlogin_mystoreExtPF();

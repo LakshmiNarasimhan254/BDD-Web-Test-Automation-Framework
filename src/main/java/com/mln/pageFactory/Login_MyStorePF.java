@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.mln.utilities.Common_Utility;
+import com.mln.utilities.CommonUtility;
 
 public class Login_MyStorePF {
 
@@ -51,29 +51,29 @@ public class Login_MyStorePF {
 
 	}
 
-	public void EnterTxtCreateEmail(Common_Utility wmobj,String stxtboxvalue) throws Exception
+	public void EnterTxtCreateEmail(CommonUtility wmobj, String stxtboxvalue) throws Exception
 	{		
 		wmobj.setValue(txtbxCreateEmail, stxtboxvalue);
 	}
-	public void ClickCreateAccount(Common_Utility wmobj) throws Exception
+	public void ClickCreateAccount(CommonUtility wmobj) throws Exception
 	{
 		wmobj.clickLnkBtn(btnCreateAccount);
 	}
-	public boolean VerifyLogin_MyStore(Common_Utility wmobj) throws Exception
+	public boolean VerifyLogin_MyStore(CommonUtility wmobj) throws Exception
 	{
 		boolean bResult = false;
 		return bResult =wmobj.isElementPresent(txtbxCreateEmail);
 	}
 
-	public void EnterEmailaddress(Common_Utility wmobj,String stxtboxvalue) throws Exception
+	public void EnterEmailaddress(CommonUtility wmobj, String stxtboxvalue) throws Exception
 	{		
 		wmobj.setValue(txtEmailaddress, stxtboxvalue);
 	}
-	public void EnterPassword(Common_Utility wmobj,String stxtboxvalue) throws Exception
+	public void EnterPassword(CommonUtility wmobj, String stxtboxvalue) throws Exception
 	{		
 		wmobj.setValue(txtPassword, stxtboxvalue);
 	}
-	public void ClickSignin(Common_Utility wmobj) throws Exception
+	public void ClickSignin(CommonUtility wmobj) throws Exception
 	{
 		wmobj.clickLnkBtn(btnSignin);
 	}
