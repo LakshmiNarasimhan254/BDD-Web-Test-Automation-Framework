@@ -1,17 +1,17 @@
 
-# BDD Web Test Automation Framework   
+# Web Test Automation Framework -BDD (Pagefactory)
 
 ## Description
-This is a BDD Style test automation framework for web application using Selenium,Java and cucumber.
+This is a BDD Style test automation framework for web application using Selenium,Java and cucumber using Pagefactory .
 Please read the document for its features, capability and usage 
 
 
 ## Libraries Used:
     1. Selenium - Web Automation
     2. Cucumber -   Feature file for BDD Style
-    3. Extent Reports - Reporting Library to generate beautiful html reports
+    3. Extent Reports - Reporting Library to generate beautiful spark reports
     4. WebDriverManager - Executables management
-    5. Apache poi -To control the text execution run and test data in excel
+    5. Apache poi -To Provide test data in excel and generate excel report
     
 
 ## Capabilities:
