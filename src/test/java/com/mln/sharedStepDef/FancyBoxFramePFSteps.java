@@ -71,7 +71,7 @@ public class FancyBoxFramePFSteps {
 			}	
 
 			//Waiting for the Quickview Display
-			WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));    
+			WebDriverWait w = new WebDriverWait(driver, 10000);
 			w.until(ExpectedConditions.visibilityOf(fancyBoxFramePF.getTxtName()));
 
 

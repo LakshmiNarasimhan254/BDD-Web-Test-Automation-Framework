@@ -51,7 +51,7 @@ public class FancyBoxFramePF {
 
 	public FancyBoxFramePF(WebDriver driver){
 		this.driver =driver;
-		WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));    
+		WebDriverWait w = new WebDriverWait(driver, 10000);
 		w.until(ExpectedConditions.elementToBeClickable(By.xpath("//iframe[contains(@id,'fancybox-frame')]")));
 		//System.out.println("hi");
 		List<WebElement> frames = driver.findElements(By.xpath("//iframe"));

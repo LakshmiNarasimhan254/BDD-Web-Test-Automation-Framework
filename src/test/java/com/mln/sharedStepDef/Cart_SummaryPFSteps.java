@@ -48,7 +48,7 @@ public class Cart_SummaryPFSteps {
 	public void enters_the_txt() {
 		boolean bResult = false;
 		try{
-			WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));    
+			WebDriverWait w = new WebDriverWait(driver, 10000);
 			w.until(ExpectedConditions.visibilityOf(cart_SummaryPF.getTxtCartSummary()));
 
 			if (cart_SummaryPF.getTxtCartSummary()!=null){

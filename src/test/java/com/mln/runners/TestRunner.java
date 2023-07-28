@@ -11,9 +11,9 @@ import io.cucumber.junit.Cucumber;
 		monochrome= true,
 		plugin=
 	{
-			"pretty","html:target/HtmlReports/index.html" 
-			,"json:target/JsonReports/index.json" 
-			//,"com.avenstack.extenreports.cucumber.adapter.ExtentCucumberAdapter"
+			"pretty","html:target/HtmlReports/index.html"
+			,"json:target/JsonReports/index.json"
+			,"com.avenstack.extenreports.cucumber.adapter.ExtentCucumberAdapter:"
 			,"junit:target/XmlReports/index.xml"
 			,"timeline:test-output-thread/"
 			,"rerun:target/failedrerun.txt"

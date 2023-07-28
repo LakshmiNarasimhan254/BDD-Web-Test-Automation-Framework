@@ -445,7 +445,7 @@ public class CommonUtility {
 	}	
 
 	public void webelementWait(WebElement We){
-		WebDriverWait wait = new WebDriverWait(adriver,Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(adriver,10000);
 		wait.until(ExpectedConditions.visibilityOf(We));
 	}
 

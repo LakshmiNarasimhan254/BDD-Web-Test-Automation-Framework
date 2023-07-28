@@ -52,7 +52,7 @@ public class Layer_CartPFSteps {
 		//	layer_CartPF = testContext.getPageObjectManager().getlayer_CartPF();
 		try {
 			driver.switchTo().defaultContent();
-			WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));    
+			WebDriverWait w = new WebDriverWait(driver, 10000);
 			w.until(ExpectedConditions.visibilityOf(layer_CartPF.getBtnProceedtoCheckout()));
 
 			if (layer_CartPF.getBtnProceedtoCheckout()!=null){
